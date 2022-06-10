@@ -1,0 +1,176 @@
+@import "util";
+@import "glitch";
+
+
+#title-section {
+    @include flex(column, flex-start);
+
+    width: 95%;
+    height: 100vh;
+
+    h1, h3 {
+        @extend %glitch;
+    }
+
+    h3 {
+        position: relative;
+        color: $red;
+    }
+
+    margin: {
+        left: 5%;
+    };
+
+    @media all and (max-width: 1000px) {
+        h3 {
+            font-size: 3vw;
+        }
+    }
+}
+
+#contact-section, #projects-section, #skills-section, #legal-section {
+    @include flex(column, stretch);
+
+    margin: {
+        top: 10vh;
+        bottom: 10vh;
+        left: 0;
+        right: 0;
+    }
+
+    width: 80%;
+
+    div {
+        @include flex(row, center, space-around);
+
+        p {
+            width: 40%;
+        }
+
+        img {
+            max-width: 60vh;
+            height: auto;
+        }
+    }
+
+    .project-gif {
+        max-width: 50%;
+        border-radius: 20px;
+    }
+
+    .wrap {
+        @include flex(row, $responsive: false);
+        flex-wrap: wrap;
+        width: calc(3*12vh + 12vw);
+    }
+
+    h2 {
+        @extend %glitch;
+        text-align: center;
+        margin: {
+            top: 15vh;
+            bottom: 5vh;
+        }
+    }
+    h3 {
+        text-align: center;
+        margin: {
+            top: 5vh;
+            bottom: 2vh;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .pp {
+        max-width: 40vh;
+        border-radius: 100%;
+    }
+
+    a {
+        font-size: 10vh;
+        text-decoration: none;
+        color: $white;
+        transition: all 0.25s ease-in-out;
+
+        margin: 1vw 2vw;
+
+        &:hover {
+            color: $red;
+        }
+
+        img {
+            width: 12vh;
+            height: auto;
+        }
+    }
+
+    @media all and (max-width: 1000px) {
+        width: 90%;
+
+        div {
+            width: 100%;
+            p {
+                display: none;
+            }
+            .responsive {
+                display: block;
+                font-size: 2vw;
+                width: 60%;
+            }
+            img {
+                width: 70%;
+                max-height: 100%;
+                margin: {
+                    top: 2vh;
+                    bottom: 2vh;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+
+        .project-gif {
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+            max-height: 100%;
+            height: auto;
+            margin: {
+                top: 2vh;
+                bottom: 2vh;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin: {
+                top: 3vh;
+                bottom: 1vh;
+            }
+        }
+
+        .wrap {
+            width: calc(4*12vw);
+        }
+
+        a {
+            font-size: 10vw;
+
+            img {
+                max-width: 100%;
+                min-height: 0;
+                width: 12vw;
+                height: auto;
+            }
+        }
+    }
+}
+
+footer {
+    height: 100px;
+}

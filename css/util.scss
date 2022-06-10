@@ -1,0 +1,95 @@
+// colors
+$white: #F9F9F9;
+$yellow: #DDF247;
+$red: #C20114;
+$blue: #301A4B;
+$light-gray: #A8A8A8;
+$dark-gray: #5B5B5B;
+$black: #000000;
+
+$background-color: $black;
+$text-color: $white;
+
+
+// fonts
+@font-face {
+    font-family: title-font;
+    src: url("../assets/font/Miedinger W01 Bold.ttf") format("opentype");
+}
+$font: title-font, sans-serif;
+
+@font-face {
+    font-family: default-font;
+    src: url("../assets/font/Klik-Light.otf") format("opentype");
+}
+$other-font: default-font, sans-serif;
+
+
+// text
+//$size: h1 15vh, h2 10vh, h3 5vh, p 2.5vh;
+$size: h1 8vw 8vw, h2 4vw 4vw, h3 2vw 2vw, p 1vw 2vw;
+@each $element in $size {
+    #{nth($element, 1)} {
+        font-family: $font;
+        font-size: nth($element, 2);
+        @media all and (max-width: 1000px) {
+            font-size: nth($element, 3);
+        }
+        color: $text-color;
+        margin: 0;
+
+        user-select: none; // Chrome and Opera
+        -webkit-user-select: none; // Safari
+        -khtml-user-select: none; // Konqueror HTML
+        -moz-user-select: none; // Firefox
+        -ms-user-select: none; // Internet Explorer and Edge
+    }
+}
+
+
+// mixins
+@mixin flex($direction, $align-items: center, $justify-content: center, $responsive: true) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    @if ($responsive) {
+        @media all and (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+}
+
+
+// alias
+%hit-box {
+    border: solid 1px $text-color;
+}
+
+
+// cursor
+.pointer {
+    cursor: pointer;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+// scroll bar
+body::-webkit-scrollbar {
+    width: 12px;
+    background: rgba($black, 0);
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba($black, 0);;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba($red, 0.5);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba($red, 1);
+}

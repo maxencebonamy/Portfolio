@@ -1,0 +1,120 @@
+@import "util";
+
+header {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    z-index: 1;
+
+    nav {
+        @include flex(row, center, space-between, false);
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        max-height: 100px;
+        width: auto;
+        border-radius: 100%;
+        margin: {
+            left: 2vw;
+        }
+    }
+}
+
+.background {
+    background: $black;
+    background: linear-gradient(180deg, $black, $black, $black, transparent);
+}
+
+.toggle {
+    padding: 0;
+    display: none;
+    z-index: 1;
+    color: $white;
+    font-size: 100px;
+    margin: {
+        left: 3vw;
+        top: 25px;
+    }
+}
+
+.menu {
+    @include flex(row, center, space-between);
+
+    list-style: none;
+
+    margin: {
+        right: 2vw;
+    };
+
+    li {
+        margin: 10px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    img {
+        max-height: 150px;
+        min-height: 150px;
+        width: auto;
+        border-radius: 100%;
+        margin: {
+            left: 3vw;
+        }
+    }
+
+    .toggle {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 3;
+        padding-right: 3vw;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        display: none !important;
+    }
+
+    .clicked .open {
+        display: none;
+    }
+
+    .clicked .close {
+        display: block !important;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(90deg, $black, $black, $black, transparent);;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: transform 1s;
+        z-index: 2;
+
+        img {
+            position: relative;
+            z-index: 3;
+        }
+
+        p {
+            font-size: 4vw;
+        }
+    }
+
+    .clicked .menu {
+        transform: translateX(0);
+    }
+}
