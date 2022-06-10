@@ -805,21 +805,22 @@ body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
   }
 }
-#contact-section div, #projects-section div, #skills-section div, #legal-section div {
+#contact-section .github-link, #projects-section .github-link, #skills-section .github-link, #legal-section .github-link {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 @media all and (max-width: 1000px) {
-  #contact-section div, #projects-section div, #skills-section div, #legal-section div {
+  #contact-section .github-link, #projects-section .github-link, #skills-section .github-link, #legal-section .github-link {
     flex-direction: column;
   }
 }
-#contact-section div p, #projects-section div p, #skills-section div p, #legal-section div p {
+#contact-section .github-link p, #projects-section .github-link p, #skills-section .github-link p, #legal-section .github-link p {
   width: 40%;
 }
-#contact-section div img, #projects-section div img, #skills-section div img, #legal-section div img {
+#contact-section .github-link img, #projects-section .github-link img, #skills-section .github-link img, #legal-section .github-link img {
   max-width: 60vh;
   height: auto;
 }
@@ -834,6 +835,20 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   flex-wrap: wrap;
   width: calc(36vh + 12vw);
+}
+#contact-section .wrap a, #projects-section .wrap a, #skills-section .wrap a, #legal-section .wrap a {
+  font-size: 10vh;
+  text-decoration: none;
+  color: #F9F9F9;
+  transition: all 0.25s ease-in-out;
+  margin: 1vw 2vw;
+}
+#contact-section .wrap a:hover, #projects-section .wrap a:hover, #skills-section .wrap a:hover, #legal-section .wrap a:hover {
+  color: #C20114;
+}
+#contact-section .wrap a img, #projects-section .wrap a img, #skills-section .wrap a img, #legal-section .wrap a img {
+  width: 12vh;
+  height: auto;
 }
 #contact-section h2, #projects-section h2, #skills-section h2, #legal-section h2 {
   text-align: center;
@@ -851,20 +866,6 @@ body::-webkit-scrollbar-thumb:hover {
 #contact-section .pp, #projects-section .pp, #skills-section .pp, #legal-section .pp {
   max-width: 40vh;
   border-radius: 100%;
-}
-#contact-section a, #projects-section a, #skills-section a, #legal-section a {
-  font-size: 10vh;
-  text-decoration: none;
-  color: #F9F9F9;
-  transition: all 0.25s ease-in-out;
-  margin: 1vw 2vw;
-}
-#contact-section a:hover, #projects-section a:hover, #skills-section a:hover, #legal-section a:hover {
-  color: #C20114;
-}
-#contact-section a img, #projects-section a img, #skills-section a img, #legal-section a img {
-  width: 12vh;
-  height: auto;
 }
 @media all and (max-width: 1000px) {
   #contact-section, #projects-section, #skills-section, #legal-section {
@@ -908,14 +909,15 @@ body::-webkit-scrollbar-thumb:hover {
   #contact-section .wrap, #projects-section .wrap, #skills-section .wrap, #legal-section .wrap {
     width: 48vw;
   }
-  #contact-section a, #projects-section a, #skills-section a, #legal-section a {
+  #contact-section .wrap a, #projects-section .wrap a, #skills-section .wrap a, #legal-section .wrap a {
     font-size: 10vw;
   }
-  #contact-section a img, #projects-section a img, #skills-section a img, #legal-section a img {
+  #contact-section .wrap a img, #projects-section .wrap a img, #skills-section .wrap a img, #legal-section .wrap a img {
     max-width: 100%;
     min-height: 0;
     width: 12vw;
     height: auto;
+    border-radius: 0;
   }
 }
 

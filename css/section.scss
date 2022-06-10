@@ -40,7 +40,8 @@
 
     width: 80%;
 
-    div {
+    .github-link {
+        text-decoration: none;
         @include flex(row, center, space-around);
 
         p {
@@ -62,6 +63,24 @@
         @include flex(row, $responsive: false);
         flex-wrap: wrap;
         width: calc(3*12vh + 12vw);
+
+        a {
+            font-size: 10vh;
+            text-decoration: none;
+            color: $white;
+            transition: all 0.25s ease-in-out;
+
+            margin: 1vw 2vw;
+
+            &:hover {
+                color: $red;
+            }
+
+            img {
+                width: 12vh;
+                height: auto;
+            }
+        }
     }
 
     h2 {
@@ -89,23 +108,7 @@
         border-radius: 100%;
     }
 
-    a {
-        font-size: 10vh;
-        text-decoration: none;
-        color: $white;
-        transition: all 0.25s ease-in-out;
 
-        margin: 1vw 2vw;
-
-        &:hover {
-            color: $red;
-        }
-
-        img {
-            width: 12vh;
-            height: auto;
-        }
-    }
 
     @media all and (max-width: 1000px) {
         width: 90%;
@@ -156,16 +159,17 @@
 
         .wrap {
             width: calc(4*12vw);
-        }
 
-        a {
-            font-size: 10vw;
+            a {
+                font-size: 10vw;
 
-            img {
-                max-width: 100%;
-                min-height: 0;
-                width: 12vw;
-                height: auto;
+                img {
+                    max-width: 100%;
+                    min-height: 0;
+                    width: 12vw;
+                    height: auto;
+                    border-radius: 0;
+                }
             }
         }
     }
