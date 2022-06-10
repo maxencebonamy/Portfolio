@@ -871,18 +871,18 @@ body::-webkit-scrollbar-thumb:hover {
   #contact-section, #projects-section, #skills-section, #legal-section {
     width: 90%;
   }
-  #contact-section div, #projects-section div, #skills-section div, #legal-section div {
+  #contact-section .github-link, #projects-section .github-link, #skills-section .github-link, #legal-section .github-link {
     width: 100%;
   }
-  #contact-section div p, #projects-section div p, #skills-section div p, #legal-section div p {
+  #contact-section .github-link p, #projects-section .github-link p, #skills-section .github-link p, #legal-section .github-link p {
     display: none;
   }
-  #contact-section div .responsive, #projects-section div .responsive, #skills-section div .responsive, #legal-section div .responsive {
+  #contact-section .github-link .responsive, #projects-section .github-link .responsive, #skills-section .github-link .responsive, #legal-section .github-link .responsive {
     display: block;
     font-size: 2vw;
     width: 60%;
   }
-  #contact-section div img, #projects-section div img, #skills-section div img, #legal-section div img {
+  #contact-section .github-link img, #projects-section .github-link img, #skills-section .github-link img, #legal-section .github-link img {
     width: 70%;
     max-height: 100%;
     margin-top: 2vh;
