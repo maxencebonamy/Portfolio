@@ -1,0 +1,12 @@
+{
+    "en": {
+        "home": [
+            "I am a", "Software", "Engineer"
+        ]
+    },
+    "fr": {
+        "home": [
+            "Je suis", "Ingénieur", "Software"
+        ]
+    }
+}
