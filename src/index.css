@@ -171,4 +171,22 @@ body,
         }
     }
     
+    .rotate-animation {
+        animation: rotation 500ms linear;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotateZ(90deg);
+        }
+
+        50% {
+            transform: rotateZ(270deg);
+        }
+
+        100% {
+            transform: rotateZ(90deg);
+        }
+    }
+    
 }

@@ -1,10 +1,16 @@
 {
     "en": {
+        "navbar": [
+            "About", "Projects", "Skills", "Contact"
+        ],
         "home": [
             "I am a", "Software", "Engineer"
         ]
     },
     "fr": {
+        "navbar": [
+            "À propos", "Projets", "Compétences", "Contact"
+        ],
         "home": [
             "Je suis", "Ingénieur", "Software"
         ]
