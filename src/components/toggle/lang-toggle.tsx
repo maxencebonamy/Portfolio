@@ -1,26 +1,27 @@
-import { useState } from "react";
+import { useState } from "react"
 
 interface LangToggleProps {
-    lang: "fr" | "en";
-    toggleLang: () => void;
+    lang: "fr" | "en"
+    toggleLang: () => void
+    className?: string
 }
 
-const LangToggle = ({ lang, toggleLang }: LangToggleProps) => {
-    const [isRotating, setIsRotating] = useState(false);
+const LangToggle = ({ lang, toggleLang, className }: LangToggleProps) => {
+    const [isRotating, setIsRotating] = useState(false)
 
     const handleClick = () => {
         toggleLang()
-        setIsRotating(true);
+        setIsRotating(true)
 
         window.setTimeout(() => {
-            setIsRotating(false);
-        }, 500);
+            setIsRotating(false)
+        }, 500)
     }
 
     return (
         <div
             onClick={handleClick}
-            className="flex items-center justify-start flex-row gap-2 cursor-pointer"
+            className={className ?? "" + " flex items-center justify-start flex-row gap-2 cursor-pointer"}
         >
             <p className="uppercase text-dark dark:text-light text-xl transition-colors duration-500">
                 {lang}
@@ -33,7 +34,7 @@ const LangToggle = ({ lang, toggleLang }: LangToggleProps) => {
                 {">"}
             </p>
         </div>
-    );
-};
+    )
+}
 
-export default LangToggle;
+export default LangToggle

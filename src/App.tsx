@@ -1,19 +1,20 @@
-import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
-import Home from "./sections/home";
+import { useEffect, useState } from "react"
+import Navbar from "./components/navbar"
+import Home from "./sections/home"
+import About from "./sections/about"
 
 function App() {
     // Lang
 
-    const [lang, setLang] = useState<"fr" | "en">("fr");
+    const [lang, setLang] = useState<"fr" | "en">("fr")
 
     const toggleLang = () => {
         if (lang === "en") {
-            setLang("fr");
+            setLang("fr")
         } else if (lang === "fr") {
-            setLang("en");
+            setLang("en")
         }
-    };
+    }
 
     // Theme
 
@@ -21,35 +22,37 @@ function App() {
         window.matchMedia("(prefers-color-scheme: dark)").matches
             ? "dark"
             : "light"
-    );
+    )
 
     if (theme === "dark") {
-        document.getElementById("root")?.classList.add("dark");
+        // document.getElementById("root")?.classList.add("dark")
+        document.querySelector("body")?.classList.add("dark")
     }
 
     const toggleTheme = () => {
-        setTheme(() => (theme === "dark" ? "light" : "dark"));
-        document.getElementById("root")?.classList.toggle("dark");
-    };
+        setTheme(() => (theme === "dark" ? "light" : "dark"))
+        // document.getElementById("root")?.classList.toggle("dark")
+        document.querySelector("body")?.classList.toggle("dark")
+    }
 
     // Width
 
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
         const handleWindowResize = () => {
-            setWidth(window.innerWidth);
-        };
+            setWidth(window.innerWidth)
+        }
 
-        window.addEventListener("resize", handleWindowResize);
+        window.addEventListener("resize", handleWindowResize)
 
         return () => {
-            window.removeEventListener("resize", handleWindowResize);
-        };
-    }, []);
+            window.removeEventListener("resize", handleWindowResize)
+        }
+    }, [])
 
     return (
-        <div className="h-full w-full select-none bg-light dark:bg-dark transition-colors duration-500">
+        <div className="w-full select-none bg-light dark:bg-dark transition-colors duration-500 flex items-center justify-start flex-col">
             <Navbar
                 toggleTheme={toggleTheme}
                 lang={lang}
@@ -57,8 +60,9 @@ function App() {
                 width={width}
             />
             <Home lang={lang} />
+            <About lang={lang} />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
