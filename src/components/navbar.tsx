@@ -29,7 +29,7 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
 
     const navListWidth = document.querySelector(".nav-list")?.clientWidth ?? width
     const openSpanStyle = {
-        transform: `translateX(-${width >= BREAKPOINTS.lg ? navListWidth - 32 : width - 48 * 3}px)`
+        transform: `translateX(-${width >= BREAKPOINTS.lg ? navListWidth - 32 : width - 48*3}px)`
     }
     const ulStyle = width >= BREAKPOINTS.lg ? {} : { width: "100%" }
     const mdLinkStyle = {
@@ -65,7 +65,7 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                         </a>
                     ))
                 ) : (
-                    <div style={mdLinkStyle} className="flex flex-row justify-center items-center gap-8 transition-all duration-500 bg-light dark:bg-dark">
+                    <div style={mdLinkStyle} className="flex flex-row justify-center items-center gap-8 transition-all duration-500">
                         <ThemeToggle toggleTheme={toggleTheme} />
                         <LangToggle lang={lang} toggleLang={toggleLang} />
                     </div>

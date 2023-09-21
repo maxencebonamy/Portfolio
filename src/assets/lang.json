@@ -5,7 +5,24 @@
         ],
         "home": [
             "I am a", "Software", "Engineer"
-        ]
+        ],
+        "about": {
+            "title": "Who am I?",
+            "texts": [
+                "My name is Maxence Bonamy, I'm 20 and I've been passionate about programming since the age of 11.",
+                "I'm currently studying at ESEO in Angers, an engineering school specializing in electronics and IT.",
+                "I decided to specialize in software and web development."
+            ]
+        },
+        "projects": {
+            "title": "My projects"
+        },
+        "skills": {
+            "title": "My skills"
+        },
+        "contact": {
+            "title": "Contact me"
+        }
     },
     "fr": {
         "navbar": [
@@ -13,6 +30,23 @@
         ],
         "home": [
             "Je suis", "Ingénieur", "Software"
-        ]
+        ],
+        "about": {
+            "title": "Qui suis-je ?",
+            "texts": [
+                "Je m'appelle Maxence Bonamy, j'ai 20 ans et je suis passionné de programmation depuis l'âge de 11 ans.",
+                "J'étudie actuellement à l'ESEO à Angers, une école d'ingénieur spécialisée en électronique et en informatique.",
+                "J'ai décidé de me spécialiser en développement logiciel et web."
+            ]
+        },
+        "projects": {
+            "title": "Mes projets"
+        },
+        "skills": {
+            "title": "Mes compétences"
+        },
+        "contact": {
+            "title": "Contactez-moi"
+        }
     }
 }

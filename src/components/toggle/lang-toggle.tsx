@@ -10,20 +10,33 @@ const LangToggle = ({ lang, toggleLang, className }: LangToggleProps) => {
     const [isRotating, setIsRotating] = useState(false)
 
     const handleClick = () => {
-        toggleLang()
+        if (isRotating) return
+        
+        const textElements = document.getElementsByClassName("text-transition") as HTMLCollectionOf<HTMLElement>
+        for (let item of textElements) {
+            item.style.opacity = "0"
+        }
+
         setIsRotating(true)
 
         window.setTimeout(() => {
-            setIsRotating(false)
+            toggleLang()
+            for (let item of textElements) {
+                item.style.opacity = "1"
+            }
         }, 500)
+
+        window.setTimeout(() => {
+            setIsRotating(false)
+        }, 1000)
     }
 
     return (
         <div
             onClick={handleClick}
-            className={className ?? "" + " flex items-center justify-start flex-row gap-2 cursor-pointer"}
+            className={className ?? "" + " w-12 flex items-center justify-between flex-row cursor-pointer"}
         >
-            <p className="uppercase text-dark dark:text-light text-xl transition-colors duration-500">
+            <p className="text-transition uppercase text-dark dark:text-light text-xl transition-all duration-500">
                 {lang}
             </p>
             <p

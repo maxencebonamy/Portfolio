@@ -6,11 +6,11 @@ interface SeparatorProps {
 
 const Separator = ({ orientation, length, className }: SeparatorProps) => {
     const style = {
-        width: orientation === "horizontal" ? length : "1px",
-        height: orientation === "vertical" ? length : "1px"
+        width: orientation === "horizontal" ? length : "0.15rem",
+        height: orientation === "vertical" ? length : "0.15rem"
     }
 
-    return <div style={style} className={className ?? "" + " rounded-full bg-dark dark:bg-light"} />
+    return <div style={style} className={(className ?? "") + " rounded-full bg-dark dark:bg-light transition-colors duration-500"} />
 }
 
 export default Separator

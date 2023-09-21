@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 interface CircleBlobProps {
     size: number
     className?: string
@@ -10,11 +12,16 @@ interface BlobProps {
 
 
 const CircleBlob = ({size, className}: CircleBlobProps) => {
-    const style = {
-        width: `${size}rem`,
-        height: `${size}rem`,
-        boxShadow: `0 0 ${size / 4}rem ${size / 4}rem #FF6A69`
-    }
+    const [style, setStyle] = useState({})
+
+    useEffect(() => {
+        setStyle({
+            ...style,
+            width: `${size}rem`,
+            height: `${size}rem`,
+            boxShadow: `0 0 ${size / 4}rem ${size / 4}rem #FF6A69`
+        })
+    }, [size])
 
     return (
         <div style={style} className={`${className ?? ""} absolute rounded-full bg-red`}></div>

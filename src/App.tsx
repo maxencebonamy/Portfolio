@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import Navbar from "./components/navbar"
 import Home from "./sections/home"
 import About from "./sections/about"
+// import Projects from "./sections/projects"
+// import Skills from "./sections/skills"
+// import Contact from "./sections/contact"
 
 function App() {
     // Lang
@@ -59,8 +62,11 @@ function App() {
                 toggleLang={toggleLang}
                 width={width}
             />
-            <Home lang={lang} />
-            <About lang={lang} />
+            <Home lang={lang} width={width} />
+            <About lang={lang} width={width} />
+            {/* <Projects lang={lang} /> */}
+            {/* <Skills lang={lang} /> */}
+            {/* <Contact lang={lang} /> */}
         </div>
     )
 }
