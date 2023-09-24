@@ -1,9 +1,9 @@
 interface ArrowProps {
-    sense: "left" | "right"
+    direction: "left" | "right"
     className?: string
 }
 
-const Arrow = ({ sense, className }: ArrowProps) => {
+const Arrow = ({ direction: sense, className }: ArrowProps) => {
     return sense === "left" ? (
         <svg
             className={className ?? ""}

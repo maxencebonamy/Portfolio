@@ -21,7 +21,12 @@
             "title": "My skills"
         },
         "contact": {
-            "title": "Contact me"
+            "title": "Contact me",
+            "texts": [
+                "Do you want to learn more about me?",
+                "Do you have a project to make?",
+                "Don't hesitate to contact me on social networks!"
+            ]
         }
     },
     "fr": {
@@ -46,7 +51,12 @@
             "title": "Mes compétences"
         },
         "contact": {
-            "title": "Contactez-moi"
+            "title": "Contactez-moi",
+            "texts": [
+                "Vous voulez en apprendre plus sur moi ?",
+                "Vous avez un projet à réaliser ?",
+                "N'hésitez pas à me contacter par mail ou sur d'autres réseaux !"
+            ]
         }
     }
 }

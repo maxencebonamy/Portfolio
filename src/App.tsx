@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import Navbar from "./components/navbar"
 import Home from "./sections/home"
 import About from "./sections/about"
+import Contact from "./sections/contact"
+import Footer from "./sections/footer"
 // import Projects from "./sections/projects"
 // import Skills from "./sections/skills"
 // import Contact from "./sections/contact"
@@ -66,7 +68,8 @@ function App() {
             <About lang={lang} width={width} />
             {/* <Projects lang={lang} /> */}
             {/* <Skills lang={lang} /> */}
-            {/* <Contact lang={lang} /> */}
+            <Contact lang={lang} />
+            <Footer />
         </div>
     )
 }
