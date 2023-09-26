@@ -4,6 +4,8 @@ import Home from "./sections/home"
 import About from "./sections/about"
 import Contact from "./sections/contact"
 import Footer from "./sections/footer"
+import Skills from "./sections/skills"
+import Projects from "./sections/projects"
 // import Projects from "./sections/projects"
 // import Skills from "./sections/skills"
 // import Contact from "./sections/contact"
@@ -66,8 +68,8 @@ function App() {
             />
             <Home lang={lang} width={width} />
             <About lang={lang} width={width} />
-            {/* <Projects lang={lang} /> */}
-            {/* <Skills lang={lang} /> */}
+            <Projects lang={lang} />
+            <Skills lang={lang} />
             <Contact lang={lang} />
             <Footer />
         </div>

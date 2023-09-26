@@ -15,10 +15,50 @@
             ]
         },
         "projects": {
-            "title": "My projects"
+            "title": "My projects",
+            "button": "More projets",
+            "check": "Check",
+            "sand_box": {
+                "title": "Sand Box",
+                "description": "Ce projet est un logiciel de simulation physique dans lequel on peut y placer différents éléments, tels que de l'eau, du sable, du feu, etc. Ces éléments évoluent ensuite ensemble en suivant les lois de la physique."
+            },
+            "bde_eseo": {
+                "title": "ESEO Student Union's Website",
+                "description": "Ayant été responsable du pôle communication du BDE de mon école, j'ai pu réaliser le site vitrine, après avoir fait celui de campagne l'année précédente."
+            },
+            "aled": {
+                "title": "Student help",
+                "description": "Étant intervenant au SEIO, la Junior Entreprise de mon école, j'ai eu l'opportunité de réaliser plusieurs projets pour des entreprises. En particulier celui-ci qui consiste à ajouter un algorithme au site Internet en suite à un formulaire pour aider des étudiants en difficulté."
+            },
+            "minecraft_survival": {
+                "title": "Minecraft Survival",
+                "description": "Je suis passionné de jeux vidéos, et j'adore créer les miens. Celui-là est mon tout premier jeu complet, fortement inspiré d'un célèbre jeu."
+            }
         },
         "skills": {
-            "title": "My skills"
+            "title": "My skills",
+            "names": {
+                "cpp": "C++",
+                "php": "PHP",
+                "typescript": "TypeScript",
+                "tailwind": "Tailwind CSS",
+                "react": "React",
+                "git": "Git",
+                "c": "C",
+                "java": "Java",
+                "python": "Python"
+            },
+            "descriptions": {
+                "cpp": "",
+                "php": "",
+                "typescript": "",
+                "tailwind": "",
+                "react": "",
+                "git": "",
+                "c": "",
+                "java": "",
+                "python": ""
+            }
         },
         "contact": {
             "title": "Contact me",
@@ -45,10 +85,50 @@
             ]
         },
         "projects": {
-            "title": "Mes projets"
+            "title": "Mes projets",
+            "button": "Plus de projets",
+            "check": "Voir",
+            "sand_box": {
+                "title": "Bac à sable",
+                "description": "Ce projet est un logiciel de simulation physique dans lequel on peut y placer différents éléments, tels que de l'eau, du sable, du feu, etc. Ces éléments évoluent ensuite ensemble en suivant les lois de la physique."
+            },
+            "bde_eseo": {
+                "title": "Site du BDE de l'ESEO",
+                "description": "Ayant été responsable du pôle communication du BDE de mon école, j'ai pu réaliser le site vitrine, après avoir fait celui de campagne l'année précédente."
+            },
+            "aled": {
+                "title": "Aide pour des étudiants",
+                "description": "Étant intervenant au SEIO, la Junior Entreprise de mon école, j'ai eu l'opportunité de réaliser plusieurs projets pour des entreprises. En particulier celui-ci qui consiste à ajouter un algorithme au site Internet en suite à un formulaire pour aider des étudiants en difficulté."
+            },
+            "minecraft_survival": {
+                "title": "Minecraft Survival",
+                "description": "Je suis passionné de jeux vidéos, et j'adore créer les miens. Celui-là est mon tout premier jeu complet, fortement inspiré d'un célèbre jeu."
+            }
         },
         "skills": {
-            "title": "Mes compétences"
+            "title": "Mes compétences",
+            "names": {
+                "cpp": "C++",
+                "php": "PHP",
+                "typescript": "TypeScript",
+                "tailwind": "Tailwind CSS",
+                "react": "React",
+                "git": "Git",
+                "c": "C",
+                "java": "Java",
+                "python": "Python"
+            },
+            "descriptions": {
+                "cpp": "",
+                "php": "",
+                "typescript": "",
+                "tailwind": "",
+                "react": "",
+                "git": "",
+                "c": "",
+                "java": "",
+                "python": ""
+            }
         },
         "contact": {
             "title": "Contactez-moi",
