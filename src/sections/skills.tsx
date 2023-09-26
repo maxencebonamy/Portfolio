@@ -55,6 +55,7 @@ const Skills = ({ lang }: SkillsProps) => {
                                 "cursor-pointer flex items-center justify-center transition-all duration-500"
                             )}
                             onClick={() => handleClick(item)}
+                            key={item}
                         >
                             <img
                                 src={skillsImages[item]}

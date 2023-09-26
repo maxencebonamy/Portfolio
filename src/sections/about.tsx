@@ -34,10 +34,10 @@ const About = ({ lang, width }: AboutProps) => {
                 <div className="flex flex-col items-start justify-center">
                     {
                         langTexts[lang].about.texts.map((item, index) => (
-                            <>
+                            <p className="text-transition transition-all duration-500 text-md text-dark dark:text-light" key={item}>
                                 {index > 0 ? <br /> : <></>}
-                                <p className="text-transition transition-all duration-500 text-md text-dark dark:text-light">{item}</p>
-                            </>
+                                {item}
+                            </p>
                         ))
                     }
                 </div>

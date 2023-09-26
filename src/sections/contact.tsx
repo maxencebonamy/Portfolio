@@ -31,7 +31,7 @@ const Contact = ({ lang }: ContactProps) => {
                 <div className="w-full lg:w-fit flex flex-col items-start justify-start">
                     {
                         langTexts[lang].contact.texts.map((item) => (
-                            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md">{item}</p>
+                            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md" key={item}>{item}</p>
                         ))
                     }
                     <div className="flex flex-row flex-wrap items-center justify-start gap-4 my-4">

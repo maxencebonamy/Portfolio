@@ -59,6 +59,7 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                             onMouseLeave={() => setSelectedItem(null)}
                             style={{ opacity: getLinkOpacity(text) }}
                             href={`#${langTexts.en.navbar[index].toLowerCase()}`}
+                            key={index}
                             className="cursor-pointer text-dark dark:text-light transition-all duration-500 text-xl uppercase"
                         >
                             {text}
