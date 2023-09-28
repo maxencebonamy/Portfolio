@@ -17,22 +17,22 @@
         "projects": {
             "title": "My projects",
             "button": "More projets",
-            "check": "Check",
+            "check": "See",
             "sand_box": {
                 "title": "Sand Box",
-                "description": "Ce projet est un logiciel de simulation physique dans lequel on peut y placer différents éléments, tels que de l'eau, du sable, du feu, etc. Ces éléments évoluent ensuite ensemble en suivant les lois de la physique."
+                "description": "This project is a physics simulation software program in which you can place various elements, such as water, sand, fire, etc., in the same environment. These elements then evolve together according to the laws of physics."
             },
             "bde_eseo": {
                 "title": "ESEO Student Union's Website",
-                "description": "Ayant été responsable du pôle communication du BDE de mon école, j'ai pu réaliser le site vitrine, après avoir fait celui de campagne l'année précédente."
+                "description": "As head of communications at my school's Student Union, I was able to design our association's showcase site for 2022-2023, after having designed the campaign site for the previous year."
             },
             "aled": {
-                "title": "Student help",
-                "description": "Étant intervenant au SEIO, la Junior Entreprise de mon école, j'ai eu l'opportunité de réaliser plusieurs projets pour des entreprises. En particulier celui-ci qui consiste à ajouter un algorithme au site Internet en suite à un formulaire pour aider des étudiants en difficulté."
+                "title": "School Help Website",
+                "description": "As a member of SEIO, my school's Junior Entreprise, I had the opportunity to carry out several projects for companies. This one in particular involved adding an algorithm to the website following a form to help students in difficulty."
             },
             "minecraft_survival": {
                 "title": "Minecraft Survival",
-                "description": "Je suis passionné de jeux vidéos, et j'adore créer les miens. Celui-là est mon tout premier jeu complet, fortement inspiré d'un célèbre jeu."
+                "description": "I'm passionate about video games, and love creating my own. This one is my very first complete game, heavily inspired by a famous game. It's clearly not perfect, but it means a lot to me."
             }
         },
         "skills": {
@@ -63,9 +63,9 @@
         "contact": {
             "title": "Contact me",
             "texts": [
-                "Do you want to learn more about me?",
-                "Do you have a project to make?",
-                "Don't hesitate to contact me on social networks!"
+                "Would you like to learn more about me?",
+                "Do you have a project to carry out?",
+                "Don't hesitate to contact me by e-mail or on other networks!"
             ]
         }
     },
@@ -94,15 +94,15 @@
             },
             "bde_eseo": {
                 "title": "Site du BDE de l'ESEO",
-                "description": "Ayant été responsable du pôle communication du BDE de mon école, j'ai pu réaliser le site vitrine, après avoir fait celui de campagne l'année précédente."
+                "description": "Ayant été responsable du pôle communication du BDE de mon école, j'ai pu réaliser le site vitrine de notre association pour l'année 2022-2023, après avoir fait celui de campagne l'année précédente."
             },
             "aled": {
-                "title": "Aide pour des étudiants",
+                "title": "Site d'aide scolaire",
                 "description": "Étant intervenant au SEIO, la Junior Entreprise de mon école, j'ai eu l'opportunité de réaliser plusieurs projets pour des entreprises. En particulier celui-ci qui consiste à ajouter un algorithme au site Internet en suite à un formulaire pour aider des étudiants en difficulté."
             },
             "minecraft_survival": {
                 "title": "Minecraft Survival",
-                "description": "Je suis passionné de jeux vidéos, et j'adore créer les miens. Celui-là est mon tout premier jeu complet, fortement inspiré d'un célèbre jeu."
+                "description": "Je suis passionné de jeux vidéos, et j'adore créer les miens. Celui-là est mon tout premier jeu complet, fortement inspiré d'un célèbre jeu. Il n'est clairement pas parfait mais il a beaucoup d'importance à mes yeux."
             }
         },
         "skills": {

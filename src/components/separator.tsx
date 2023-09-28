@@ -9,8 +9,8 @@ interface SeparatorProps {
 
 const Separator = ({ orientation, length, className, corners }: SeparatorProps) => {
     const style = {
-        width: orientation === "horizontal" ? length : "0.15rem",
-        height: orientation === "vertical" ? length : "0.15rem"
+        width: orientation === "horizontal" ? length : "0.1rem",
+        height: orientation === "vertical" ? length : "0.1rem"
     }
 
     return <div style={style} className= {cn(

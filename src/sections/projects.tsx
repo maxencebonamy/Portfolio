@@ -22,19 +22,17 @@ const Projects = ({ lang }: ProjectsProps) => {
                 </h2>
             </div>
             <Separator orientation="horizontal" length="100%" className="mt-4" />
-            <div className="flex flex-col lg:flex-row items-start justify-strech w-full h-[500px]">
-                <Project project={projects[0]} lang={lang} />
-                <Separator length="100%" orientation="vertical" className="mx-4" corners />
-                <Project project={projects[1]} lang={lang} />
+            <div className="flex flex-col lg:flex-row items-start justify-strech w-full">
+                <Project project={projects[0]} lang={lang} side="left" />
+                <Project project={projects[1]} lang={lang} side="right" />
             </div>
             <Separator length="100%" orientation="horizontal" />
-            <div className="flex flex-col lg:flex-row items-stretch justify-strech w-full h-[500px]">
-                <Project project={projects[2]} lang={lang} />
-                <Separator length="100%" orientation="vertical" className="mx-4" corners />
-                <Project project={projects[3]} lang={lang} />
+            <div className="flex flex-col lg:flex-row items-stretch justify-strech w-full">
+                <Project project={projects[2]} lang={lang} side="left" />
+                <Project project={projects[3]} lang={lang} side="right" />
             </div>
             <Separator length="100%" orientation="horizontal" className="mb-4" />
-            <Button textTransition text={langTexts[lang].projects.button} height="2.5rem" className="w-fit self-center" />
+            <Button textTransition text={langTexts[lang].projects.button} height="2.5rem" className="w-fit self-center" link="https://github.com/maxencebonamy" />
         </section>
     )
 }
