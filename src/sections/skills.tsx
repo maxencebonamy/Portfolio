@@ -1,7 +1,7 @@
 import Separator from "../components/separator"
 import langTexts from "../assets/lang.json"
 import Arrow from "../components/svg/arrow"
-import { ImportantSkill, Skill, skills, skillsImages } from "../assets/skills/skills"
+import { ImportantSkill, skills, skillsImages } from "../assets/skills/skills"
 import { useState } from "react"
 import { cn } from "../utils"
 

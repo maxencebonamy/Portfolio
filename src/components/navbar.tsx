@@ -62,10 +62,10 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                                     ].toLowerCase()}`}
                                     key={index}
                                     onClick={() => setIsOpen(false)}
-                                    className="cursor-pointer text-dark dark:text-light transition-all duration-500 flex flex-col items-center justify-start"
+                                    className="cursor-pointe flex flex-col items-center justify-start"
                                 >
-                                    <h2 className="text-6xl font-extrabold [color:transparent] stroke-dark dark:stroke-light italic">{index + 1}</h2>
-                                    <p className="text-transition uppercase text-xl">{text}</p>
+                                    <h2 className="text-6xl font-extrabold [color:transparent] stroke-dark dark:stroke-light italic transition-all duration-500">{index + 1}</h2>
+                                    <p className="text-transition uppercase text-xl text-dark dark:text-light transition-all duration-500">{text}</p>
                                 </a>
                             ))
                         }
