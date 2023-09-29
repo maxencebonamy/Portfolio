@@ -43,7 +43,7 @@ const Project = ({ project, lang, side }: ProjectProps) => {
             <div className="flex flex-row items-center justify-start gap-4 flex-wrap">
                 {
                     project.skills.map(({ name, id }) => (
-                        <div className="h-8 rounded-full flex flex-row items-center justify-center border-2 border-dark dark:border-light transition-all duration-500 pl-1 pr-2 gap-2">
+                        <div key={id} className="h-8 rounded-full flex flex-row items-center justify-center border-2 border-dark dark:border-light transition-all duration-500 pl-1 pr-2 gap-2">
                             <img className="h-6 rounded-md" src={skillsImages[id as Skill]} alt={id} />
                             <p className="text-md text-dark dark:text-light transition-all duration-500">
                                 {name}

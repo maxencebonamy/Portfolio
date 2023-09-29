@@ -1,7 +1,7 @@
 import Separator from "../components/separator"
 import langTexts from "../assets/lang.json"
 import Arrow from "../components/svg/arrow"
-import { Skill, skills, skillsImages } from "../assets/skills/skills"
+import { ImportantSkill, Skill, skills, skillsImages } from "../assets/skills/skills"
 import { useState } from "react"
 import { cn } from "../utils"
 
@@ -10,17 +10,17 @@ interface SkillsProps {
 }
 
 const Skills = ({ lang }: SkillsProps) => {
-    const [skill, setSkill] = useState<Skill>("react")
+    const [skill, setSkill] = useState<ImportantSkill>("react")
 
     const [orderedSkills, setOrderedSkills] = useState([...skills])
 
     const shiftOrderedSkills = () => {
-        let first = orderedSkills.shift() as Skill
+        let first = orderedSkills.shift() as ImportantSkill
         orderedSkills.push(first)
         setOrderedSkills(orderedSkills)
     }
 
-    const handleClick = (item: Skill) => {
+    const handleClick = (item: ImportantSkill) => {
         setSkill(item)
         while (orderedSkills[4] !== item) {
             shiftOrderedSkills()
@@ -65,19 +65,21 @@ const Skills = ({ lang }: SkillsProps) => {
                         </div>
                     ))}
                 </div>
-                <h3 className="px-4 py-1 rounded-full border-dark dark:border-light border-2 text-2xl text-dark dark:text-light transition-all duration-500 font-semibold my-4">
-                    {langTexts[lang].skills.names[skill]}
-                </h3>
-                <p className="text-md text-dark dark:text-light transition-all duration-500 text-transition">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                    possimus in eveniet voluptas esse fugiat. Nam saepe, esse
-                    laborum accusamus reprehenderit corporis obcaecati quos in
-                    labore laboriosam, nulla praesentium facilis. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Beatae velit
-                    ducimus repudiandae amet labore quisquam rerum dignissimos
-                    odio dicta consectetur totam, qui numquam natus repellendus
-                    recusandae minima ab explicabo ullam.
-                </p>
+                <div className="flex flex-col items-center justify-start">
+                    <h3 className="px-4 py-1 rounded-full border-dark dark:border-light border-2 text-2xl text-dark dark:text-light transition-all duration-500 font-semibold my-4">
+                        {langTexts[lang].skills.names[skill]}
+                    </h3>
+                    <p className="text-md text-dark dark:text-light transition-all duration-500 text-transition">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                        possimus in eveniet voluptas esse fugiat. Nam saepe, esse
+                        laborum accusamus reprehenderit corporis obcaecati quos in
+                        labore laboriosam, nulla praesentium facilis. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Beatae velit
+                        ducimus repudiandae amet labore quisquam rerum dignissimos
+                        odio dicta consectetur totam, qui numquam natus repellendus
+                        recusandae minima ab explicabo ullam.
+                    </p>
+                </div>
             </div>
         </section>
     )

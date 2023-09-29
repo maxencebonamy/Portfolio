@@ -17,9 +17,11 @@ import xmake from "./xmake.png"
 
 export type Skill = "c" | "cpp" | "git" | "java" | "javascript" | "php" | "pygame" | "python" | "react" | "sass" | "sfml" | "sql" | "tailwind" | "typescript" | "wordpress" | "xmake"
 
+export type ImportantSkill = "c" | "cpp" | "git" | "java" | "php" | "python" | "react" | "tailwind" | "typescript"
+
 export const skills = [
     "cpp", "php", "typescript", "tailwind", "react", "git", "c", "java", "python"
-] as Skill[]
+] as ImportantSkill[]
 
 export const skillsImages = {
     c: c,
