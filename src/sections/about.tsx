@@ -15,11 +15,11 @@ const About = ({ lang, width }: AboutProps) => {
             id="about"
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
         >
-            <div className="flex flex-row items-center justify-start">
+            <div className="flex flex-row items-end justify-start">
                 <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-left">
                     {langTexts[lang].about.title}
                 </h2>
-                <Arrow direction="right" className="text-transition ml-2 lg:ml-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
+                <Arrow direction="right" className="text-transition mb-[7px] lg:ml-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
             </div>
             <div className="flex flex-row items-center justify-between">
                 {

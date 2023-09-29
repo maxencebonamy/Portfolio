@@ -71,7 +71,7 @@ function App() {
             <Projects lang={lang} />
             <Skills lang={lang} />
             <Contact lang={lang} />
-            <Footer />
+            <Footer lang={lang} />
         </div>
     )
 }

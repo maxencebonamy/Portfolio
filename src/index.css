@@ -82,7 +82,7 @@ body,
         background: linear-gradient(to bottom, var(--gradient-1) 0%, var(--gradient-1) 50%, var(--gradient-3) 100%);
         transition:
             --gradient-1 500ms cubic-bezier(0.4, 0, 0.2, 1),
-            --gradient-2 500ms cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-3 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .gradient-bg::before {
         content: "";
@@ -135,6 +135,33 @@ body,
         }
     }
 
+    .skills-wheel::after {
+        content: "";
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 2rem;
+        background: linear-gradient(to right, var(--gradient-1), var(--gradient-3));
+        transition:
+            --gradient-1 500ms cubic-bezier(0.4, 0, 0.2, 1),
+            --gradient-3 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dark .skills-wheel::after {
+        --gradient-1: rgb(26, 26, 26);
+        --gradient-3: rgba(26, 26, 26, 0);
+    }
+
+    @-moz-document url-prefix() {
+        .skills-wheel::after {
+            background: linear-gradient(to right, rgb(235, 235, 235), rgba(235, 235, 235, 0));
+        }
+        .dark .skills-wheel::after {
+            background: linear-gradient(to right, rgb(26, 26, 26), rgba(26, 26, 26, 0));
+        }
+    }
+
     .stroke-light {
         -webkit-text-stroke: 4px #EBEBEB;
         transition-property: -webkit-text-stroke, opacity;
@@ -157,6 +184,23 @@ body,
         }
     }
 
+    .call-to-action {
+        animation: call-to-action-animation 5s infinite linear;
+    }
+    @keyframes call-to-action-animation {
+        0% {
+            transform: scaleX(90%) scaleY(90%) rotate(150deg);
+        }
+        10% {
+            transform: scaleX(100%) scaleY(100%) rotate(160deg);
+        }
+        20% {
+            transform: scaleX(90%) scaleY(90%) rotate(150deg);
+        }
+        100% {
+            transform: scaleX(90%) scaleY(90%) rotate(150deg);
+        }
+    }
 
     .blur-box {
         box-shadow: 0px 0px 100px 100px blue;

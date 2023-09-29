@@ -15,8 +15,8 @@ const Projects = ({ lang }: ProjectsProps) => {
             id="projects"
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32 flex flex-col"
         >
-            <div className="flex flex-row items-center justify-end">
-                <Arrow direction="left" className="text-transition mr-2 lg:mr-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
+            <div className="flex flex-row items-end justify-end">
+                <Arrow direction="left" className="text-transition mb-[7px] lg:mr-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
                 <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-right">
                     {langTexts[lang].projects.title}
                 </h2>
