@@ -6,7 +6,6 @@ html,
 body,
 :root,
 #root {
-    height: 100%;
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
@@ -16,7 +15,6 @@ body,
     }
 
     body {
-        width: 100vw;
         background: #EBEBEB;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,6 +104,20 @@ body,
     .dark .gradient-bg::before {
         --gradient-2: rgba(26, 26, 26, 0.75);
         --gradient-3: rgba(26, 26, 26, 0);
+    }
+
+    .mobile-nav::before {
+        content: "";
+        z-index: 10;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 8rem;
+        width: 100vw;
+        background: linear-gradient(to bottom, rgba(235, 235, 235, 1), rgba(235, 235, 235, 0));
+    }
+    .dark .mobile-nav::before {
+        background: linear-gradient(to bottom, rgba(26, 26, 26, 1), rgba(26, 26, 26, 0));
     }
 
     @-moz-document url-prefix() {
