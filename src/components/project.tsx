@@ -32,12 +32,12 @@ const Project = ({ project, lang, side }: ProjectProps) => {
                 />
             </div>
             <div className="flex w-full flex-row items-center justify-start gap-x-4 gap-y-2 flex-wrap">
-                <h3 className="text-transition text-dark dark:text-light transition-all duration-500 text-2xl uppercase font-semibold">
+                <h3 className="text-transition text-dark dark:text-light transition-all duration-500 text-2xl uppercase font-semibold" lang={lang}>
                     {langTexts[lang].projects[project.id].title}
                 </h3>
-                <Button height="2rem" text={langTexts[lang].projects.check} link={project.link} textTransition />
+                <Button height="2rem" text={langTexts[lang].projects.check} link={project.link} textTransition lang={lang} />
             </div>
-            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md">
+            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md" lang={lang}>
                 {langTexts[lang].projects[project.id].description}
             </p>
             <div className="flex flex-row items-center justify-start gap-4 flex-wrap">

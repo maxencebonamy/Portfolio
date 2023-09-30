@@ -17,7 +17,7 @@ const Projects = ({ lang }: ProjectsProps) => {
         >
             <div className="flex flex-row items-end justify-end">
                 <Arrow direction="left" className="text-transition mb-[7px] lg:mr-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
-                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-right">
+                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-right" lang={lang}>
                     {langTexts[lang].projects.title}
                 </h2>
             </div>
@@ -32,7 +32,7 @@ const Projects = ({ lang }: ProjectsProps) => {
                 <Project project={projects[3]} lang={lang} side="right" />
             </div>
             <Separator length="100%" orientation="horizontal" className="mb-4" />
-            <Button textTransition text={langTexts[lang].projects.button} height="2.5rem" className="w-fit self-center" link="https://github.com/maxencebonamy" />
+            <Button textTransition text={langTexts[lang].projects.button} height="2.5rem" className="w-fit self-center" link="https://github.com/maxencebonamy" lang={lang} />
         </section>
     )
 }

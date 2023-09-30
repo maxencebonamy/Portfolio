@@ -9,9 +9,10 @@ interface ButtonProps {
     text: string
     link?: string
     textTransition?: boolean
+    lang?: string
 }
 
-const Button = ({ children, className, height, text, link, textTransition }: ButtonProps) => {
+const Button = ({ children, className, height, text, link, textTransition, lang }: ButtonProps) => {
     return (
         <a
             href={link}
@@ -23,6 +24,7 @@ const Button = ({ children, className, height, text, link, textTransition }: But
                 "border-dark dark:border-light rounded-full border-2 transition-colors duration-500",
     
             )}
+            lang={lang}
         >
             {children}
             <p className={"text-dark dark:text-light align-top text-lg font-semibold transition-all duration-500" + (textTransition ? " text-transition" : "")}>{text}</p>

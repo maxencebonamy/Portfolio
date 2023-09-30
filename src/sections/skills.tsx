@@ -89,7 +89,7 @@ const Skills = ({ lang }: SkillsProps) => {
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
         >
             <div className="flex flex-row items-end justify-start">
-                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl text-left">
+                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl text-left" lang={lang}>
                     {langTexts[lang].skills.title}
                 </h2>
                 <Arrow

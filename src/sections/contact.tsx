@@ -18,7 +18,7 @@ const Contact = ({ lang }: ContactProps) => {
         >
             <div className="flex flex-row items-end justify-end">
                 <Arrow direction="left" className="text-transition mb-[7px] lg:mr-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />
-                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-right">
+                <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-right" lang={lang}>
                     {langTexts[lang].contact.title}
                 </h2>
             </div>
@@ -31,7 +31,7 @@ const Contact = ({ lang }: ContactProps) => {
                 <div className="w-full lg:w-fit flex flex-col items-start justify-start">
                     {
                         langTexts[lang].contact.texts.map((item) => (
-                            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md" key={item}>{item}</p>
+                            <p className="text-transition text-dark dark:text-light transition-all duration-500 text-md" key={item} lang={lang}>{item}</p>
                         ))
                     }
                     <div className="flex flex-row flex-wrap items-center justify-start gap-4 my-4">
