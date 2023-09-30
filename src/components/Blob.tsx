@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { cn } from "../utils"
 
 interface CircleBlobProps {
     size: number
@@ -33,7 +34,7 @@ const Blob = ({size, className}: BlobProps) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActualSize(size * 0.99)
+            setActualSize(size * 0.9999)
             setTimeout(() => {
                 setActualSize(size)
             }, 10)

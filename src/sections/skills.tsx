@@ -13,32 +13,30 @@ interface SkillsProps {
 const Skills = ({ lang }: SkillsProps) => {
     const [skill, setSkill] = useState(0)
     const nbSkills = skills.length
-    let canTurn = true
+    const [canTurn, setCanTurn] = useState(true)
 
     const textComponent = useRef<HTMLDivElement>(null)
     const [skillName, setSkillName] = useState(langTexts[lang].skills.names[skills[skill].name])
     const [skillDescription, setSkillDescription] = useState(langTexts[lang].skills.descriptions[skills[skill].name])
 
     const setSkillWithTransition = (index: number) => {
-        setSkill(index)
-        canTurn = false
-        if (textComponent.current) textComponent.current.style.opacity = "0"
-    }
-
-    const onSkillClick = (index: number) => {
         if (canTurn) {
-            setSkillWithTransition(index)
+            setCanTurn(false)
+            setSkill(index)
+            if (textComponent.current) textComponent.current.style.opacity = "0"
         }
     }
 
+    const onSkillClick = (index: number) => {
+        setSkillWithTransition(index)
+    }
+
     const nextSkill = () => {
-        if (canTurn) {
-            if (skill === nbSkills - 1) {
-                setSkillWithTransition(0)
-            }
-            else {
-                setSkillWithTransition(skill + 1)
-            }
+        if (skill === nbSkills - 1) {
+            setSkillWithTransition(0)
+        }
+        else {
+            setSkillWithTransition(skill + 1)
         }
     }
 
@@ -74,7 +72,7 @@ const Skills = ({ lang }: SkillsProps) => {
         }, 250)
 
         const secondTimeout = setTimeout(() => {
-            canTurn = true
+            setCanTurn(true)
         }, 500)
 
         return () => {
