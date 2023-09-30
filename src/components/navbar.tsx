@@ -64,7 +64,7 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                                     onClick={() => setIsOpen(false)}
                                     className="cursor-pointe flex flex-col items-center justify-start"
                                 >
-                                    <h2 className="text-6xl font-extrabold [color:transparent] stroke-dark dark:stroke-light italic transition-all duration-500">{index + 1}</h2>
+                                    <p className="text-6xl font-extrabold [color:transparent] stroke-dark dark:stroke-light italic transition-all duration-500">{index + 1}</p>
                                     <p className="text-transition uppercase text-xl text-dark dark:text-light transition-all duration-500">{text}</p>
                                 </a>
                             ))

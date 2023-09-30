@@ -1,7 +1,7 @@
 import Separator from "../components/separator"
 import langTexts from "../assets/lang.json"
 import Arrow from "../components/svg/arrow"
-import photo from "../assets/photo.png"
+import photo from "../assets/photo.webp"
 import { BREAKPOINTS } from "../utils"
 
 interface AboutProps {
