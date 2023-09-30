@@ -3,17 +3,20 @@ import langTexts from "../assets/lang.json"
 import Arrow from "../components/svg/arrow"
 import photo from "../assets/photo.webp"
 import { BREAKPOINTS } from "../utils"
+import React from "react"
 
 interface AboutProps {
     lang: "fr" | "en"
     width: number
+    appRef: React.RefObject<HTMLElement>
 }
 
-const About = ({ lang, width }: AboutProps) => {
+const About = ({ lang, width, appRef }: AboutProps) => {
     return (
         <section
             id="about"
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
+            ref={appRef}
         >
             <div className="flex flex-row items-end justify-start">
                 <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl max-w-5/6 text-left" lang={lang}>

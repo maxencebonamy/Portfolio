@@ -7,13 +7,15 @@ import { projects } from "../assets/projects/projects"
 
 interface ProjectsProps {
     lang: "fr" | "en"
+    appRef: React.RefObject<HTMLElement>
 }
 
-const Projects = ({ lang }: ProjectsProps) => {
+const Projects = ({ lang, appRef }: ProjectsProps) => {
     return (
         <section
             id="projects"
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32 flex flex-col"
+            ref={appRef}
         >
             <div className="flex flex-row items-end justify-end">
                 <Arrow direction="left" className="text-transition mb-[7px] lg:mr-6 h-7 sm:h-9 lg:h-11 fill-dark dark:fill-light transition-all duration-500" />

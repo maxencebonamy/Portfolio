@@ -8,9 +8,10 @@ import Turn from "../components/svg/turn"
 
 interface SkillsProps {
     lang: "fr" | "en"
+    appRef: React.RefObject<HTMLElement>
 }
 
-const Skills = ({ lang }: SkillsProps) => {
+const Skills = ({ lang, appRef }: SkillsProps) => {
     const [skill, setSkill] = useState(0)
     const nbSkills = skills.length
     const [canTurn, setCanTurn] = useState(true)
@@ -20,7 +21,7 @@ const Skills = ({ lang }: SkillsProps) => {
     const [skillDescription, setSkillDescription] = useState(langTexts[lang].skills.descriptions[skills[skill].name])
 
     const setSkillWithTransition = (index: number) => {
-        if (canTurn) {
+        if (canTurn && index !== skill) {
             setCanTurn(false)
             setSkill(index)
             if (textComponent.current) textComponent.current.style.opacity = "0"
@@ -85,6 +86,7 @@ const Skills = ({ lang }: SkillsProps) => {
         <section
             id="skills"
             className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
+            ref={appRef}
         >
             <div className="flex flex-row items-end justify-start">
                 <h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl text-left" lang={lang}>
@@ -105,7 +107,7 @@ const Skills = ({ lang }: SkillsProps) => {
                     <div className="absolute w-96 h-96 rounded-full border-2 border-dark dark:border-light transition-all duration-500" />
                     <div className="absolute w-56 h-56 rounded-full border-2 border-dark dark:border-light transition-all duration-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                     <div className={cn("absolute h-56 w-56 rounded-full right-10 top-1/2 -translate-y-1/2 translate-x-1/2 transition-all duration-500 opacity-0")} style={{background: `radial-gradient(${skills[skill].color} 0%, transparent 70%`}} />
-                    <Turn className="absolute bottom-0 right-0 text-red transition-all duration-500 h-16 w-16 call-to-action cursor-pointer hover:text-dark hover:dark:text-light" onClick={nextSkill} />
+                    <Turn className="absolute bottom-0 right-0 transition-all duration-500 h-16 w-16 call-to-action cursor-pointer text-dark dark:text-light opacity-75 hover:opacity-100" onClick={nextSkill} />
                     {skills.map((item, index) => (
                         <div
                             key={index}
@@ -121,7 +123,7 @@ const Skills = ({ lang }: SkillsProps) => {
                         </div>
                     ))}
                 </div>
-                <div className="flex flex-col items-center justify-start mt-96 sm:mt-0 sm:ml-72 transition-opacity duration-[250ms]" ref={textComponent}>
+                <div className="flex flex-col items-center justify-start w-full mt-96 sm:mt-0 sm:pl-72 transition-opacity duration-[250ms]" ref={textComponent}>
                     <h3 className="px-4 py-1 rounded-full border-dark dark:border-light border-2 text-2xl text-dark dark:text-light transition-all duration-500 font-semibold my-4">
                         {skillName}
                     </h3>

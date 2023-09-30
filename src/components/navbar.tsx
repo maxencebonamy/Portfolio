@@ -4,15 +4,23 @@ import LangToggle from "./toggle/lang-toggle"
 import langTexts from "../assets/lang.json"
 import { BREAKPOINTS, cn } from "../utils"
 
+type SectionsRefs = {
+    about: React.RefObject<HTMLElement>,
+    projects: React.RefObject<HTMLElement>,
+    skills: React.RefObject<HTMLElement>,
+    contact: React.RefObject<HTMLElement>
+}
+
 interface NavbarProps {
     toggleTheme: () => void
     lang: "fr" | "en"
     toggleLang: () => void
     width: number
+    sectionsRefs: SectionsRefs
     children?: React.ReactNode
 }
 
-const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
+const Navbar = ({ toggleTheme, lang, toggleLang, width, sectionsRefs }: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const [selectedItem, setSelectedItem] = useState<string | null>(null)
@@ -57,11 +65,14 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                         {
                             langTexts[lang].navbar.map((text, index) => (
                                 <a
-                                    href={`#${langTexts.en.navbar[
-                                        index
-                                    ].toLowerCase()}`}
+                                    href=""
                                     key={index}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        const ref = sectionsRefs[langTexts.en.navbar[index].toLowerCase() as keyof SectionsRefs]
+                                        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                        setIsOpen(false)
+                                    }}
                                     className="cursor-pointe flex flex-col items-center justify-start"
                                     lang={lang}
                                 >
@@ -89,9 +100,12 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width }: NavbarProps) => {
                             onMouseEnter={() => setSelectedItem(text)}
                             onMouseLeave={() => setSelectedItem(null)}
                             style={{ opacity: getLinkOpacity(text) }}
-                            href={`#${langTexts.en.navbar[
-                                index
-                            ].toLowerCase()}`}
+                            onClick={(e) => {
+                                e.preventDefault()
+                                const ref = sectionsRefs[langTexts.en.navbar[index].toLowerCase() as keyof SectionsRefs]
+                                ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                            }}
+                            href=""
                             key={index}
                             lang={lang}
                             className="cursor-pointer text-dark dark:text-light transition-all duration-500 text-xl uppercase"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Navbar from "./components/navbar"
 import Home from "./sections/home"
 import About from "./sections/about"
@@ -56,7 +56,18 @@ function App() {
         return () => {
             window.removeEventListener("resize", handleWindowResize)
         }
-    }, [])
+    }, [width])
+
+    const sections = {
+        about: useRef<HTMLElement>(null),
+        projects: useRef<HTMLElement>(null),
+        skills: useRef<HTMLElement>(null),
+        contact: useRef<HTMLElement>(null)
+    }
+
+    // useEffect(() => {
+    //     console.log(aboutSection.current?.offsetTop)
+    // })
 
     return (
         <div className="w-full select-none bg-light dark:bg-dark transition-colors duration-500 flex items-center justify-start flex-col">
@@ -65,12 +76,13 @@ function App() {
                 lang={lang}
                 toggleLang={toggleLang}
                 width={width}
+                sectionsRefs={sections}
             />
             <Home lang={lang} width={width} />
-            <About lang={lang} width={width} />
-            <Projects lang={lang} />
-            <Skills lang={lang} />
-            <Contact lang={lang} />
+            <About lang={lang} width={width} appRef={sections.about} />
+            <Projects lang={lang} appRef={sections.projects} />
+            <Skills lang={lang} appRef={sections.skills} />
+            <Contact lang={lang} appRef={sections.contact} />
             <Footer lang={lang} />
         </div>
     )

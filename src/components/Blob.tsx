@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { cn } from "../utils"
 
 interface CircleBlobProps {
     size: number
