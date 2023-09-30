@@ -42,7 +42,7 @@ git clone https://github.com/maxencebonamy/Portfolio
 cd Portfolio
 ```
 
-3. **Installing** NodeJS dependencies with this command:
+3. **Install** NodeJS dependencies with this command:
 ```
 npm i
 ```
