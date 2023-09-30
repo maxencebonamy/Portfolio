@@ -6,9 +6,6 @@ import Contact from "./sections/contact"
 import Footer from "./sections/footer"
 import Skills from "./sections/skills"
 import Projects from "./sections/projects"
-// import Projects from "./sections/projects"
-// import Skills from "./sections/skills"
-// import Contact from "./sections/contact"
 
 function App() {
     // Lang
@@ -32,13 +29,11 @@ function App() {
     )
 
     if (theme === "dark") {
-        // document.getElementById("root")?.classList.add("dark")
         document.querySelector("body")?.classList.add("dark")
     }
 
     const toggleTheme = () => {
         setTheme(() => (theme === "dark" ? "light" : "dark"))
-        // document.getElementById("root")?.classList.toggle("dark")
         document.querySelector("body")?.classList.toggle("dark")
     }
 
@@ -58,16 +53,14 @@ function App() {
         }
     }, [width])
 
+    // Sections References
+
     const sections = {
         about: useRef<HTMLElement>(null),
         projects: useRef<HTMLElement>(null),
         skills: useRef<HTMLElement>(null),
         contact: useRef<HTMLElement>(null)
     }
-
-    // useEffect(() => {
-    //     console.log(aboutSection.current?.offsetTop)
-    // })
 
     return (
         <div className="w-full select-none bg-light dark:bg-dark transition-colors duration-500 flex items-center justify-start flex-col">
