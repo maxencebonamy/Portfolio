@@ -45,6 +45,7 @@ const Navbar = ({ toggleTheme, lang, toggleLang, width, sectionsRefs }: NavbarPr
     const ulStyle = width >= BREAKPOINTS.lg ? {} : { width: "100%" }
     const mdLinkStyle = {
         opacity: isOpen ? "1" : "0",
+        visibility: isOpen ? "visible": "hidden"
     }
 
     return (
