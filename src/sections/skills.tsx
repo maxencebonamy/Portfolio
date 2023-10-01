@@ -20,6 +20,10 @@ const Skills = ({ lang, appRef }: SkillsProps) => {
     const [skillName, setSkillName] = useState(langTexts[lang].skills.names[skills[skill].name])
     const [skillDescription, setSkillDescription] = useState(langTexts[lang].skills.descriptions[skills[skill].name])
 
+    useEffect(() => {
+        setSkillDescription(langTexts[lang].skills.descriptions[skills[skill].name])
+    }, [lang])
+
     const setSkillWithTransition = (index: number) => {
         if (canTurn && index !== skill) {
             setCanTurn(false)
