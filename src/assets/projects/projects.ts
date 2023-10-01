@@ -26,7 +26,7 @@ export const projects = [
     {
         id: "bde_eseo",
         video: bde_eseo,
-        link: "https://maxencebonamy.fr/bdeeseo/",
+        link: "https://bdeeseo.maxencebonamy.fr",
         skills: [
             { name: "JavaScript", id: "javascript" },
             { name: "React", id: "react" },
