@@ -101,3 +101,22 @@ export const skillsImages = {
     wordpress: wordpress,
     xmake: xmake,
 }
+
+export const skillsLinks = {
+    c: "https://en.wikipedia.org/wiki/C_(programming_language)",
+    cpp: "https://learn.microsoft.com/en-us/cpp/cpp/?view=msvc-170",
+    git: "https://git-scm.com",
+    java: "https://www.java.com",
+    javascript: "https://developer.mozilla.org/en/docs/Web/JavaScript",
+    php: "https://php.net",
+    pygame: "https://pygame.org",
+    python: "https://python.org",
+    react: "https://react.dev",
+    sass: "https://sass-lang.com",
+    sfml: "https://sfml-dev.org",
+    sql: "https://en.wikipedia.org/wiki/SQL",
+    tailwind: "https://tailwindcss.com",
+    typescript: "https://typescriptlang.org",
+    wordpress: "https://wordpress.com",
+    xmake: "https://xmake.io",
+}
