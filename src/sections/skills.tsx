@@ -86,6 +86,13 @@ const Skills = ({ lang, appRef }: SkillsProps) => {
         }
     }, [skill])
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSkill()
+        }, 7500)
+        return () => clearInterval(interval)
+    }, [canTurn])
+
     return (
         <section
             id="skills"

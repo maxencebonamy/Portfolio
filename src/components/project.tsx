@@ -1,7 +1,7 @@
 import { useState } from "react"
 import langTexts from "../assets/lang.json"
 import { Project } from "../assets/projects/projects"
-import { Skill, skillsImages } from "../assets/skills/skills"
+import { Skill, skillsImages, skillsLinks } from "../assets/skills/skills"
 import { cn } from "../utils"
 import Button from "./button"
 import ReactPlayer from "react-player"
@@ -73,19 +73,20 @@ const Project = ({ project, lang, side }: ProjectProps) => {
             </p>
             <div className="flex flex-row items-center justify-start gap-4 flex-wrap">
                 {project.skills.map(({ name, id }) => (
-                    <div
+                    <a
                         key={id}
-                        className="h-8 rounded-full flex flex-row items-center justify-center border-2 border-dark dark:border-light transition-all duration-500 pl-1 pr-2 gap-2"
+                        href={skillsLinks[id as Skill]}
+                        className="h-8 rounded-full flex flex-row items-center justify-center border-2 border-dark dark:border-light transition-all duration-500 pl-[0.375rem] pr-2 gap-2"
                     >
                         <img
-                            className="h-6 rounded-md"
+                            className="h-5 rounded-md"
                             src={skillsImages[id as Skill]}
                             alt={id}
                         />
                         <p className="text-md text-dark dark:text-light transition-all duration-500">
                             {name}
                         </p>
-                    </div>
+                    </a>
                 ))}
             </div>
         </div>
