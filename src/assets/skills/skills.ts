@@ -3,6 +3,7 @@ import cpp from "./cpp.png"
 import git from "./git.png"
 import java from "./java.png"
 import javascript from "./javascript.png"
+import next from "./next.png"
 import php from "./php.png"
 import pygame from "./pygame.png"
 import python from "./python.png"
@@ -21,6 +22,7 @@ export type Skill =
     | "git"
     | "java"
     | "javascript"
+    | "next"
     | "php"
     | "pygame"
     | "python"
@@ -89,6 +91,7 @@ export const skillsImages = {
     git: git,
     java: java,
     javascript: javascript,
+    next: next,
     php: php,
     pygame: pygame,
     python: python,
@@ -108,6 +111,7 @@ export const skillsLinks = {
     git: "https://git-scm.com",
     java: "https://www.java.com",
     javascript: "https://developer.mozilla.org/en/docs/Web/JavaScript",
+    next: "https://nextjs.org",
     php: "https://php.net",
     pygame: "https://pygame.org",
     python: "https://python.org",

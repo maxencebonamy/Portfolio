@@ -1,5 +1,5 @@
 import sand_box from "../projects/sand_box.mp4"
-import bde_eseo from "../projects/bde_eseo.mp4"
+import asynconf from "../projects/asynconf.mp4"
 import aled from "../projects/aled.mp4"
 import minecraft_survival from "../projects/minecraft_survival.mp4"
 
@@ -24,13 +24,14 @@ export const projects = [
         ]
     },
     {
-        id: "bde_eseo",
-        video: bde_eseo,
-        link: "https://bdeeseo.maxencebonamy.fr",
+        id: "asynconf",
+        video: asynconf,
+        link: "https://asynconf.maxencebonamy.fr",
         skills: [
-            { name: "JavaScript", id: "javascript" },
+            { name: "NextJS", id: "next" },
             { name: "React", id: "react" },
-            { name: "SASS", id: "sass" }
+            { name: "TypeScript", id: "typescript" },
+            { name: "TailwindCSS", id: "tailwind" }
         ]
     },
     {

@@ -26,6 +26,10 @@
                 "title": "ESEO Student Union's Website",
                 "description": "As head of communications at my school's Student Union, I was able to design our association's showcase site for 2022-2023, after having designed the campaign site for the previous year."
             },
+            "asynconf": {
+                "title": "Asynconf Tournament",
+                "description": "At the annual Asynconf conference on programming, I created this website that allowed me to clinch the first place in the tournament."
+            },
             "aled": {
                 "title": "School Help Website",
                 "description": "As a member of SEIO, my school's Junior Enterprise, I had the opportunity to carry out several projects for companies. This one in particular involved adding an algorithm to the website following a form to help students in difficulty."
@@ -94,6 +98,10 @@
             "sand_box": {
                 "title": "Bac à sable",
                 "description": "Ce projet est un logiciel de simulation physique dans lequel on peut y placer différents éléments, tels que de l'eau, du sable, du feu, etc. Ces éléments évoluent ensuite ensemble en suivant les lois de la physique."
+            },
+            "asynconf": {
+                "title": "Tournoi Asynconf",
+                "description": "Lors de la conférence annuelle Asynconf sur le thème de la programmation, j'ai réalisé ce site qui m'a permis de remporter la première place lors du tournoi."
             },
             "bde_eseo": {
                 "title": "Site du BDE de l'ESEO",
