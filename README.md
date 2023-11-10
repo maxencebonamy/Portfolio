@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/Portfolio.png" width="100%" alt="Sand Box">
+</p>
 
-## Getting Started
+https://github.com/maxencebonamy/Portfolio/assets/66129931/6ea77903-0a14-4a59-92f1-f76b288b4499
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<br>
+
+<p align="center">
+	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/1_Description.png" width="100%" alt="Description">
+</p>
+
+This website is my developer portfolio. It allows me to introduce myself, show the projects I've completed that I'm most proud of, demonstrate my skills related to the field of programming, and also put links to my social networks to contact me.
+
+To make this website, I used ReactJS with the TypeScript language. I also used the NextJS framework and the TailwindCSS library.
+
+<br>
+
+<p align="center">
+	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/2_Get_Started.png" width="100%" alt="Get Started">
+</p>
+
+### Visit the website:
+
+Just go to <a href="https://maxencebonamy.fr">maxencebonamy.fr"</a>.
+
+### Run the code:
+
+> [!NOTE]
+> *Prerequisites:*
+> - [x] *Git must be installed on your computer. If not, <a href="https://git-scm.com/downloads" target="_blank">click here.</a>*
+> - [x] *NodeJS must be installed on your computer, if not, <a href="https://nodejs.org/" target="_blank">click here.</a>*
+<br>
+
+1. **Clone** the repository on your computer. To do this, open a terminal in the folder of your choice and run the following command:
+```
+git clone https://github.com/maxencebonamy/Portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Navigate** inside the folder you've just cloned with the following command:
+```
+cd Portfolio
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Install** NodeJS dependencies with this command:
+```
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Start** the development server locally with the following command:
+```
+npm run dev
+```
 
-## Learn More
+5. A message will be displayed in the console, indicating the **url** of the local development server. Simply use your browser to go there.
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="center">
+	<img src="https://github.com/maxencebonamy/maxencebonamy/blob/main/assets/3_Features.png" width="100%" alt="Features">
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Useful website features:
+- Change theme (light or dark) with a toggle button at top left (the default theme is that of your OS).
+- Change language (English or French) with a toggle button at top left (the default language is French).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Compatibility:
+- The website is fully responsive for a computer, tablet or phone screen.
+- It works on all Chromium browsers (e.g. Chrome, Opera or Brave), as well as Edge and Safari. It also works on Firefox, but some transitions cannot be made due to missing CSS features.
