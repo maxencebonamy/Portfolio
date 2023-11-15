@@ -3,5 +3,10 @@
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+    "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
 }

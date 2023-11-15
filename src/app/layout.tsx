@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
 import type { PropsWithChildren, ReactElement } from "react"
+import { ThemeProvider, ViewportProvider } from "@/lib/providers"
 
 const font = Poppins({
 	subsets: ["latin"],
@@ -18,7 +19,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren): ReactElement {
 	return (
 		<html lang="en">
-			<body className={font.className}>{children}</body>
+			<ThemeProvider />
+			<ViewportProvider />
+
+			<body className={font.className}>
+				{children}
+			</body>
 		</html>
 	)
 }

@@ -1,9 +1,7 @@
 {
-  "extends": "@maxencebonamy",
-  "ignorePatterns": [
+	"extends": "@maxencebonamy",
+	"ignorePatterns": [
 		"postcss.config.js",
-		"tailwind.config.js",
-		"next.config.js",
-		"next-env.d.ts"
+		"next.config.js"
 	]
 }
