@@ -1,3 +1,5 @@
+"use client"
+
 /* eslint-disable max-len */
 import Separator from "../components/separator"
 import { langData } from "@/lib/lang"
@@ -6,17 +8,17 @@ import type { ReactElement } from "react"
 import { useEffect, useRef, useState } from "react"
 import Turn from "../components/atoms/svg/turn"
 import clsx from "clsx"
-import { useLangStore } from "../stores"
+import { useLangStore, useSectionsStore } from "../stores"
 import { OutlineArrow } from "../components/atoms/outline-arrow"
 
-interface SkillsProps {
-    appRef: React.RefObject<HTMLElement>
-}
-
-export const Skills = ({ appRef }: SkillsProps): ReactElement => {
+export const Skills = (): ReactElement => {
 	const [skill, setSkill] = useState(0)
 	const nbSkills = skills.length
 	const [canTurn, setCanTurn] = useState(true)
+
+	const ref = useRef<HTMLElement>(null)
+	const addSection = useSectionsStore(state => state.addSection)
+	addSection("skills", ref)
 
 	const { lang } = useLangStore()
 
@@ -100,7 +102,7 @@ export const Skills = ({ appRef }: SkillsProps): ReactElement => {
 		<section
 			id="skills"
 			className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
-			ref={appRef}
+			ref={ref}
 		>
 			<div className="flex flex-row items-end justify-start">
 				<h2 className="text-transition uppercase font-semibold text-dark dark:text-light transition-all duration-500 text-4xl sm:text-5xl lg:text-6xl text-left" lang={lang}>
@@ -109,7 +111,6 @@ export const Skills = ({ appRef }: SkillsProps): ReactElement => {
 				<OutlineArrow direction="right" className="mb-[7px] lg:ml-6 h-7 sm:h-9 lg:h-11" />
 			</div>
 			<Separator
-				orientation="horizontal"
 				length="100%"
 				className="my-4"
 			/>

@@ -1,5 +1,7 @@
+"use client"
+
 /* eslint-disable max-len */
-import Blob from "../components/blob"
+import { Blob } from "@/lib/components/atoms/blob"
 import Logo from "../components/atoms/svg/logo"
 import Mouse from "../components/mouse"
 import type { ReactElement } from "react"
@@ -7,19 +9,22 @@ import { breakpoints } from "@/lib/utils"
 import { langData } from "@/lib/lang"
 import { useLangStore, useViewportStore } from "../stores"
 
+const computeBlobSize = (viewportWidth: number): number => {
+	if (viewportWidth >= breakpoints.LG) return 12
+	if (viewportWidth >= breakpoints.SM) return 9
+	return 8
+}
 
 export const Home = (): ReactElement => {
 	const { lang } = useLangStore()
 	const { width } = useViewportStore()
 
+	const blobSize = computeBlobSize(width)
+
 	return (
 		<section className="w-full h-screen flex items-center justify-center flex-col">
 			<Blob
-				size={
-					width >= breakpoints.LG ? 12
-						: width >= breakpoints.SM ? 9
-							: 8
-				}
+				size={blobSize}
 				className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
 			/>
 			<div className="flex items-center justify-center flex-col gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

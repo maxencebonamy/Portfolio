@@ -1,3 +1,5 @@
+"use client"
+
 /* eslint-disable max-len */
 import type { ReactElement } from "react"
 import { useState } from "react"
@@ -5,22 +7,10 @@ import ThemeToggle from "./toggle/theme-toggle"
 import LangToggle from "./toggle/lang-toggle"
 import { breakpoints } from "../utils"
 import clsx from "clsx"
-import { useViewportStore } from "../stores"
+import { useSectionsStore, useViewportStore } from "../stores"
 import { useLang } from "../hooks/lang"
 
-type SectionsRefs = {
-    about: React.RefObject<HTMLElement>,
-    projects: React.RefObject<HTMLElement>,
-    skills: React.RefObject<HTMLElement>,
-    contact: React.RefObject<HTMLElement>
-}
-
-interface NavbarProps {
-    sectionsRefs: SectionsRefs
-    children?: React.ReactNode
-}
-
-const Navbar = ({ sectionsRefs }: NavbarProps): ReactElement => {
+const Navbar = (): ReactElement => {
 	const lang = useLang()
 
 	const { width } = useViewportStore()
@@ -28,6 +18,8 @@ const Navbar = ({ sectionsRefs }: NavbarProps): ReactElement => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const [selectedItem, setSelectedItem] = useState<string | null>(null)
+
+	const sections = useSectionsStore(state => state.sections)
 
 	const getLinkOpacity = (text: string): number => {
 		if (!isOpen) {
@@ -99,22 +91,22 @@ const Navbar = ({ sectionsRefs }: NavbarProps): ReactElement => {
 				className="nav-list h-8 min-w-[3rem] flex items-center justify-center gap-8 px-20"
 			>
 				{width >= breakpoints.LG ? (
-					Object.entries(lang.navbar).map((text, index) => (
+					Object.entries(lang.navbar).map(([key, value], index) => (
 						<a
-							onMouseEnter={() => setSelectedItem(text)}
+							onMouseEnter={() => setSelectedItem(key)}
 							onMouseLeave={() => setSelectedItem(null)}
-							style={{ opacity: getLinkOpacity(text) }}
+							style={{ opacity: getLinkOpacity(key) }}
 							onClick={(e) => {
 								e.preventDefault()
-								const ref = sectionsRefs[langData.en.navbar[index].toLowerCase() as keyof SectionsRefs]
+								const ref = sections[key as keyof SectionsRefs]
 								ref.current?.scrollIntoView({ behavior: "smooth", block: "start" })
 							}}
 							href=""
 							key={index}
-							lang={lang}
+							lang={lang.id}
 							className="cursor-pointer text-dark dark:text-light transition-all duration-500 text-xl uppercase"
 						>
-							{text}
+							{value}
 						</a>
 					))
 				) : (

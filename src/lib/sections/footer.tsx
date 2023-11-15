@@ -1,3 +1,5 @@
+"use client"
+
 /* eslint-disable max-len */
 import type { ReactElement } from "react"
 import { langData } from "@/lib/lang"
