@@ -1,0 +1,1 @@
+export { AboutSeparator } from "./separator"

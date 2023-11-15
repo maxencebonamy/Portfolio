@@ -1,0 +1,1 @@
+export { AboutTitle } from "./title"
