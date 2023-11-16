@@ -3,7 +3,7 @@
 /* eslint-disable max-len */
 import { Blob } from "@/lib/components/atoms/blob"
 import Logo from "../components/atoms/svg/logo"
-import Mouse from "../components/mouse"
+import { ScrollIndicator } from "../components/atoms/scroll-indicator/scroll-indicator"
 import type { ReactElement } from "react"
 import { breakpoints } from "@/lib/utils"
 import { langData } from "@/lib/lang"
@@ -27,6 +27,7 @@ export const Home = (): ReactElement => {
 				size={blobSize}
 				className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
 			/>
+
 			<div className="flex items-center justify-center flex-col gap-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<Logo className="z-10 h-28 md:h-32 lg:h-40 fill-dark dark:fill-light transition-colors duration-500 mb-3" />
 				<span className="flex items-center flex-col lg:flex-row justify-center gap-3 lg:gap-6">
@@ -41,8 +42,8 @@ export const Home = (): ReactElement => {
 					{langData[lang].home[2]}
 				</p>
 			</div>
-			<Mouse
-				size={4}
+
+			<ScrollIndicator
 				className="absolute left-1/2 -translate-x-1/2 bottom-12"
 			/>
 		</section>
