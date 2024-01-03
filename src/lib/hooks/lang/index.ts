@@ -1,1 +1,1 @@
-export * from "./use-lang.hook"
+export { useLang } from "./lang.hook"

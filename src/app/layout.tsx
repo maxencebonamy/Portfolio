@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
-import "./globals.css"
+import "@/lib/styles/globals.css"
 import type { PropsWithChildren, ReactElement } from "react"
-import { ThemeProvider, ViewportProvider } from "@/lib/providers"
+import { ThemeProvider } from "@/lib/providers/theme"
+import { ViewportProvider } from "@/lib/providers/viewport/viewport.provider"
 
 const font = Poppins({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	style: ["normal", "italic"],
 	subsets: ["latin"],
-	display: "swap",
 	variable: "--font-poppins",
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+	display: "swap"
 })
 
 export const metadata: Metadata = {
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
 	description: ""
 }
 
-export default function RootLayout({ children }: PropsWithChildren): ReactElement {
+export default ({ children }: PropsWithChildren): ReactElement => {
 	return (
 		<html lang="en">
 			<ThemeProvider />

@@ -1,4 +1,4 @@
-export type ViewportProps = {
-    width: number
+export type ViewportState = {
+	width: number
     setWidth: (width: number) => void
 }

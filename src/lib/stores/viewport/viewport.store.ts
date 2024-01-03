@@ -1,7 +1,7 @@
 import { create } from "zustand"
-import type { ViewportProps } from "./viewport.type"
+import type { ViewportState } from "."
 
-export const useViewportStore = create<ViewportProps>()(set => ({
+export const useViewportStore = create<ViewportState>()(set => ({
 	width: 0,
 	setWidth: (width: number) => set({ width })
 }))
