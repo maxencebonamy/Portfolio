@@ -67,6 +67,6 @@ export const FR: LangData = {
 		]
 	},
 	footer: {
-		content: "Build by Maxence Bonamy using Vite, React, TypeScript & Tailwind."
+		content: "Fait par Maxence Bonamy avec Next, React, TypeScript & Tailwind."
 	}
 }

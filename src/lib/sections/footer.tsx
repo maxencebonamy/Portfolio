@@ -1,18 +1,27 @@
 "use client"
 
-/* eslint-disable max-len */
 import type { ReactElement } from "react"
-import { langData } from "@/lib/lang"
-import { useLangStore } from "../stores"
-
+import clsx from "clsx"
+import { useLang } from "@/lib/hooks/lang"
 
 export const Footer = (): ReactElement => {
-	const { lang } = useLangStore()
+	const style = clsx(
+		"flex flex-col items-center justify-center",
+		"w-full py-20 mt-32 gap-2"
+	)
+
+	const textStyle = clsx(
+		"text-dark dark:text-light",
+		"lang-transition transition-all duration-500",
+		"text-md text-center"
+	)
+
+	const lang = useLang()
 
 	return (
-		<footer className="flex flex-col items-center justify-center w-full py-20 mt-32">
-			<p className="text-dark dark:text-light transition-all duration-500 text-md">© Maxence Bonamy 2023</p>
-			<p className="text-transition text-dark dark:text-light transition-all duration-500 text-md text-center mt-2" lang={lang}>{langData[lang].footer.content}</p>
+		<footer className={style}>
+			<p className={textStyle}>© Maxence Bonamy 2023</p>
+			<p className={textStyle} lang={lang.id}>{lang.footer.content}</p>
 		</footer>
 	)
 }

@@ -1,4 +1,5 @@
 import { Navbar } from "@/lib/components/organisms/navbar"
+import { Footer } from "@/lib/sections"
 import clsx from "clsx"
 import type { ReactElement } from "react"
 
@@ -18,7 +19,7 @@ export default (): ReactElement => {
 			{/* <Projects /> */}
 			{/* <Skills /> */}
 			{/* <Contact /> */}
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	)
 }

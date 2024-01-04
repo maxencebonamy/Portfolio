@@ -20,18 +20,18 @@ export const LangToggle = ({ className }: LangToggleProps): ReactElement => {
 	const handleClick = (): void => {
 		if (isRotating) return
 
-		const textElements = document.getElementsByClassName("text-transition") as HTMLCollectionOf<HTMLElement>
-		for (const item of Array.from(textElements)) {
+		const langElements = document.querySelectorAll<HTMLElement>("[lang]")
+		langElements.forEach((item) => {
 			item.style.opacity = "0"
-		}
+		})
 
 		setIsRotating(true)
 
 		window.setTimeout(() => {
 			toggleLang()
-			for (const item of Array.from(textElements)) {
+			langElements.forEach((item) => {
 				item.style.opacity = "1"
-			}
+			})
 		}, 500)
 
 		window.setTimeout(() => {
@@ -44,7 +44,7 @@ export const LangToggle = ({ className }: LangToggleProps): ReactElement => {
 			onClick={handleClick}
 			className={style}
 		>
-			<p className="text-transition uppercase text-dark dark:text-light text-xl transition-all duration-500">
+			<p className="lang-transition uppercase text-dark dark:text-light text-xl transition-all duration-500">
 				{lang}
 			</p>
 			<p
