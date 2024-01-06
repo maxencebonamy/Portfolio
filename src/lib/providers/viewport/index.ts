@@ -1,1 +1,1 @@
-export {} from "./viewport.provider"
+export { ViewportProvider } from "./viewport.provider"

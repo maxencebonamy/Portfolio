@@ -1,13 +1,12 @@
 "use client"
 
-/* eslint-disable max-len */
 import { Blob } from "@/lib/components/atoms/blob"
 import Logo from "../components/atoms/svg/logo"
 import { ScrollIndicator } from "../components/atoms/scroll-indicator/scroll-indicator"
 import type { ReactElement } from "react"
-import { breakpoints } from "@/lib/utils"
 import { langData } from "@/lib/lang"
 import { useLangStore, useViewportStore } from "../stores"
+import { breakpoints } from "@/lib/utils/style"
 
 const computeBlobSize = (viewportWidth: number): number => {
 	if (viewportWidth >= breakpoints.LG) return 12

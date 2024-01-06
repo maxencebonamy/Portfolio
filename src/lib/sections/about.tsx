@@ -4,16 +4,15 @@ import type { ReactElement } from "react"
 import React from "react"
 import { OutlineArrow } from "../components/atoms/outline-arrow"
 import { AboutSeparator } from "../components/layouts/about/separator"
-import { RefProvider } from "../providers"
 import { AboutTitle } from "../components/layouts/about/title"
 import { AboutContent } from "../components/layouts/about/content"
+import { RefProvider } from "@/lib/providers/ref"
 
 export const About = (): ReactElement => {
 	return (
 		<RefProvider
 			className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
 		>
-
 			<div className="flex flex-row items-end justify-start">
 				<AboutTitle />
 				<OutlineArrow direction="right" className="mb-[7px] lg:ml-6 h-7 sm:h-9 lg:h-11" />

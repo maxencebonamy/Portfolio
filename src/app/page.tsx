@@ -1,5 +1,5 @@
 import { Navbar } from "@/lib/components/organisms/navbar"
-import { Footer } from "@/lib/sections"
+import { About, Contact, Footer, Home, Projects, Skills } from "@/lib/sections"
 import clsx from "clsx"
 import type { ReactElement } from "react"
 
@@ -14,11 +14,11 @@ export default (): ReactElement => {
 	return (
 		<div className={style}>
 			<Navbar />
-			{/* <Home /> */}
-			{/* <About /> */}
-			{/* <Projects /> */}
-			{/* <Skills /> */}
-			{/* <Contact /> */}
+			<Home />
+			<About />
+			<Projects />
+			<Skills />
+			<Contact />
 			<Footer />
 		</div>
 	)

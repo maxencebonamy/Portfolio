@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google"
 import "@/lib/styles/globals.css"
 import type { PropsWithChildren, ReactElement } from "react"
 import { ThemeProvider } from "@/lib/providers/theme"
-import { ViewportProvider } from "@/lib/providers/viewport/viewport.provider"
+import { ViewportProvider } from "@/lib/providers/viewport"
 
 const font = Poppins({
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

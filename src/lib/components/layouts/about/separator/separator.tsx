@@ -1,9 +1,9 @@
 "use client"
 
 import { useViewportStore } from "@/lib/stores"
-import { breakpoints } from "@/lib/utils"
 import type { ReactElement } from "react"
 import Separator from "../../../separator"
+import { breakpoints } from "@/lib/utils/style"
 
 export const AboutSeparator = (): ReactElement =>  {
 	const width = useViewportStore(state => state.width)
