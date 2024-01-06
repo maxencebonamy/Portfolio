@@ -20,6 +20,8 @@
 		"next": "14.0.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-player": "^2.14.1",
+		"react-waypoint": "^10.3.0",
 		"ts-node": "^10.9.2",
 		"zod": "^3.22.4",
 		"zustand": "^4.4.7"

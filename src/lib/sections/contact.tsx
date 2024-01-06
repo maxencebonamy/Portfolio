@@ -9,7 +9,7 @@ import Logo from "../components/atoms/svg/logo"
 import { useRef, type ReactElement } from "react"
 import { useLangStore, useSectionsStore } from "../stores"
 import { OutlineArrow } from "../components/atoms/outline-arrow"
-import { Blob } from "../components/atoms/blob"
+import { Blob } from "@/lib/components/atoms/blob"
 
 export const Contact = (): ReactElement => {
 	const { lang } = useLangStore()

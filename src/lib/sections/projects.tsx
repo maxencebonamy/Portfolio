@@ -1,6 +1,5 @@
 "use client"
 
-/* eslint-disable max-len */
 import Separator from "../components/separator"
 import { langData } from "@/lib/lang"
 import Project from "../components/project"
