@@ -2,9 +2,10 @@
 
 import type { CSSProperties, ReactElement } from "react"
 import { useEffect, useState } from "react"
-import type { BlobProps, CircleProps } from "./blob.type"
-import { colors } from "@/lib/styles/colors"
 import clsx from "clsx"
+import { colors } from "@/lib/styles/colors"
+import type { BlobProps, CircleProps } from "./blob.type"
+import "@/lib/styles/animations/blob.css"
 
 const Circle = ({ size, className }: CircleProps): ReactElement => {
 	const [style, setStyle] = useState<CSSProperties>({})
@@ -23,9 +24,9 @@ const Circle = ({ size, className }: CircleProps): ReactElement => {
 		<div
 			style={style}
 			className={clsx(
-				className ?? "",
 				"absolute -translate-x-1/2 -translate-y-1/2",
-				"rounded-full"
+				"rounded-full",
+				className ?? ""
 			)}
 		/>
 	)
@@ -47,12 +48,7 @@ export const Blob = ({ size, className }: BlobProps): ReactElement => {
 	}, [])
 
 	return (
-		<div
-			className={clsx(
-				className ?? "",
-				"blob"
-			)}
-		>
+		<div className={className ?? ""}>
 			<Circle size={actualSize} className="blob-circle-1" />
 			<Circle size={actualSize} className="blob-circle-2" />
 			<Circle size={actualSize} className="blob-circle-3" />

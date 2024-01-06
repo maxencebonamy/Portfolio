@@ -1,0 +1,112 @@
+@tailwind components;
+
+@layer components {
+
+	.blob-circle-1 {
+		animation: blob-circle-1-frames 20s infinite linear;
+	}
+
+	@keyframes blob-circle-1-frames {
+		0% {
+			transform: translateX(-100%) translateY(-100%);
+		}
+
+		25% {
+			transform: translateX(-70%) translateY(-80%);
+		}
+
+		50% {
+			transform: translateX(-80%) translateY(-60%);
+		}
+
+		75% {
+			transform: translateX(-90%) translateY(-70%);
+		}
+
+		100% {
+			transform: translateX(-100%) translateY(-100%);
+		}
+	}
+
+
+	.blob-circle-2 {
+		animation: blob-circle-2-frames 20s infinite linear;
+	}
+
+	@keyframes blob-circle-2-frames {
+		0% {
+			transform: translateX(-10%) translateY(-80%);
+		}
+
+		25% {
+			transform: translateX(0%) translateY(-100%);
+		}
+
+		50% {
+			transform: translateX(-30%) translateY(-70%);
+		}
+
+		75% {
+			transform: translateX(-20%) translateY(-90%);
+		}
+
+		100% {
+			transform: translateX(-10%) translateY(-80%);
+		}
+	}
+
+
+	.blob-circle-3 {
+		animation: blob-circle-3-frames 20s infinite linear;
+	}
+
+	@keyframes blob-circle-3-frames {
+		0% {
+			transform: translateX(-80%) translateY(0%);
+		}
+
+		25% {
+			transform: translateX(-100%) translateY(-10%);
+		}
+
+		50% {
+			transform: translateX(-90%) translateY(-30%);
+		}
+
+		75% {
+			transform: translateX(-100%) translateY(-20%);
+		}
+
+		100% {
+			transform: translateX(-80%) translateY(0%);
+		}
+	}
+
+
+	.blob-circle-4 {
+		animation: blob-circle-4-frames 20s infinite linear;
+	}
+
+	@keyframes blob-circle-4-frames {
+		0% {
+			transform: translateX(0) translateY(-10%);
+		}
+
+		25% {
+			transform: translateX(-20%) translateY(0%);
+		}
+
+		50% {
+			transform: translateX(-10%) translateY(-30%);
+		}
+
+		75% {
+			transform: translateX(-30%) translateY(-20%);
+		}
+
+		100% {
+			transform: translateX(0) translateY(-10%);
+		}
+	}
+
+}

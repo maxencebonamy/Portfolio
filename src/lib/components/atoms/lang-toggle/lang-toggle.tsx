@@ -2,15 +2,19 @@
 
 import { useState, type ReactElement } from "react"
 import type { LangToggleProps } from "."
+import { ChevronDown } from "lucide-react"
 import clsx from "clsx"
 import { useLangStore } from "@/lib/stores/lang"
+import { getLangElements } from "./lang-toggle.util"
+import "@/lib/styles/animations/lang-toggle.css"
 
 export const LangToggle = ({ className }: LangToggleProps): ReactElement => {
 	const style = clsx(
+		"flex flex-row items-center justify-between gap-1",
+		"cursor-pointer",
+		"uppercase text-dark dark:text-light text-xl",
+		"transition-all duration-500",
 		className ?? "",
-		"w-12",
-		"flex flex-row items-center justify-between",
-		"cursor-pointer"
 	)
 
 	const [isRotating, setIsRotating] = useState(false)
@@ -20,7 +24,7 @@ export const LangToggle = ({ className }: LangToggleProps): ReactElement => {
 	const handleClick = (): void => {
 		if (isRotating) return
 
-		const langElements = document.querySelectorAll<HTMLElement>("[lang]")
+		const langElements = getLangElements()
 		langElements.forEach((item) => {
 			item.style.opacity = "0"
 		})
@@ -40,20 +44,9 @@ export const LangToggle = ({ className }: LangToggleProps): ReactElement => {
 	}
 
 	return (
-		<div
-			onClick={handleClick}
-			className={style}
-		>
-			<p className="lang-transition uppercase text-dark dark:text-light text-xl transition-all duration-500">
-				{lang}
-			</p>
-			<p
-				className={`arrow-lang text-dark dark:text-light text-2xl transition-colors duration-500 rotate-90 ${
-					isRotating ? "rotate-animation" : ""
-				}`}
-			>
-				{">"}
-			</p>
-		</div>
+		<p onClick={handleClick} className={style} lang={lang}>
+			{lang}
+			<ChevronDown className={clsx({ "lang-toggle": isRotating })} />
+		</p>
 	)
 }

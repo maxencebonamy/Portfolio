@@ -1,13 +1,19 @@
 "use client"
 
 import type { ReactElement } from "react"
-import type { HomeTitleProps } from "."
-import { Logo } from "@/lib/components/svg"
 import clsx from "clsx"
+import { Logo } from "@/lib/components/svg"
 import { useLang } from "@/lib/hooks/lang"
+import type { HomeTitleProps } from "."
 
 export const HomeTitle = ({ className }: HomeTitleProps): ReactElement => {
 	const lang = useLang()
+
+	const style = clsx(
+		"flex flex-col items-center justify-center",
+		"gap-3",
+		className ?? ""
+	)
 
 	const textStyle = clsx(
 		"z-10",
@@ -16,7 +22,7 @@ export const HomeTitle = ({ className }: HomeTitleProps): ReactElement => {
 	)
 
 	return (
-		<div className={className ?? ""}>
+		<div className={style}>
 			<Logo className="z-10 h-28 md:h-32 lg:h-40 fill-dark dark:fill-light transition-colors duration-500 mb-3" />
 
 			<span className="flex flex-col lg:flex-row items-center justify-center gap-3 lg:gap-6">

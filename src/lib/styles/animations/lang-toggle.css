@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+
+	.lang-toggle {
+        animation: lang-toggle-frames 1000ms linear;
+    }
+
+    @keyframes lang-toggle-frames {
+        0% {
+            transform: rotateZ(0deg);
+        }
+
+        50% {
+            transform: rotateZ(180deg);
+        }
+
+        100% {
+            transform: rotateZ(0deg);
+        }
+    }
+
+}
