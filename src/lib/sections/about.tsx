@@ -1,18 +1,15 @@
-/* eslint-disable max-len */
-import Separator from "../components/separator"
 import type { ReactElement } from "react"
 import React from "react"
-import { OutlineArrow } from "../components/atoms/outline-arrow"
-import { AboutSeparator } from "../components/layouts/about/separator"
+import { OutlineArrow } from "@/lib/components/molecules/outline-arrow"
+import { AboutSeparator } from "@/lib/components/molecules/about-separator"
 import { AboutTitle } from "../components/layouts/about/title"
 import { AboutContent } from "../components/layouts/about/content"
 import { RefProvider } from "@/lib/providers/ref"
+import { Separator } from "@/lib/components/atoms/separator"
 
 export const About = (): ReactElement => {
 	return (
-		<RefProvider
-			className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32"
-		>
+		<RefProvider className="w-10/12 lg:w-9/12 bg-light dark:bg-dark transition-colors duration-500 pt-32">
 			<div className="flex flex-row items-end justify-start">
 				<AboutTitle />
 				<OutlineArrow direction="right" className="mb-[7px] lg:ml-6 h-7 sm:h-9 lg:h-11" />
@@ -28,7 +25,6 @@ export const About = (): ReactElement => {
 			</div>
 
 			<Separator length="100%" className="my-4" />
-
 		</RefProvider>
 	)
 }

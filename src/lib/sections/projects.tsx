@@ -1,13 +1,13 @@
 "use client"
 
-import Separator from "../components/separator"
 import { langData } from "@/lib/lang"
 import Project from "../components/project"
 import Button from "../components/button"
 import { projects } from "@/assets/projects/projects"
 import { useRef, type ReactElement } from "react"
 import { useLangStore, useSectionsStore } from "../stores"
-import { OutlineArrow } from "../components/atoms/outline-arrow"
+import { OutlineArrow } from "../components/molecules/outline-arrow"
+import { Separator } from "@/lib/components/atoms/separator"
 
 export const Projects = (): ReactElement => {
 	const { lang } = useLangStore()

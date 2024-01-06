@@ -1,15 +1,15 @@
 "use client"
 
 /* eslint-disable max-len */
-import Separator from "../components/separator"
 import { langData } from "@/lib/lang"
 import Button from "../components/button"
 import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { Logo } from "@/lib/components/svg"
 import { useRef, type ReactElement } from "react"
 import { useLangStore, useSectionsStore } from "../stores"
-import { OutlineArrow } from "../components/atoms/outline-arrow"
+import { OutlineArrow } from "../components/molecules/outline-arrow"
 import { Blob } from "@/lib/components/atoms/blob"
+import { Separator } from "@/lib/components/atoms/separator"
 
 export const Contact = (): ReactElement => {
 	const { lang } = useLangStore()

@@ -1,15 +1,15 @@
 "use client"
 
 /* eslint-disable max-len */
-import Separator from "../components/separator"
 import { langData } from "@/lib/lang"
 import { skills, skillsImages } from "@/assets/skills/skills"
 import type { ReactElement } from "react"
 import { useEffect, useRef, useState } from "react"
 import clsx from "clsx"
 import { useLangStore, useSectionsStore } from "../stores"
-import { OutlineArrow } from "../components/atoms/outline-arrow"
+import { OutlineArrow } from "../components/molecules/outline-arrow"
 import { TurnArrow } from "../components/molecules/turn-arrow"
+import { Separator } from "@/lib/components/atoms/separator"
 
 export const Skills = (): ReactElement => {
 	const [skill, setSkill] = useState(0)

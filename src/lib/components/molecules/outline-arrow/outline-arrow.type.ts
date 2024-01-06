@@ -1,4 +1,4 @@
-type ArrowDirection = "left" | "right"
+export type ArrowDirection = "left" | "right"
 
 export type OutlineArrowProps = {
     direction: ArrowDirection
