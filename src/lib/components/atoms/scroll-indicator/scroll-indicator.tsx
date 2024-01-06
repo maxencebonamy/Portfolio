@@ -12,9 +12,9 @@ export const ScrollIndicator = ({ className }: ScrollIndicatorProps): ReactEleme
 	)
 
 	const spanStyle = clsx(
-		"w-[0.15rem] h-4",
+		"w-[0.15rem] h-4 mt-3",
 		"bg-dark dark:bg-light",
-		"mouse-scroll rounded-full mt-3",
+		"mouse-scroll rounded-full",
 		"transition-colors duration-500"
 	)
 
