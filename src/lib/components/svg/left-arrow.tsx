@@ -1,5 +1,5 @@
 import type { ReactElement } from "react"
-import type { SVGProps } from "./svg.type"
+import type { SVGProps } from "."
 
 export const LeftArrow = ({ className }: SVGProps): ReactElement => {
 	return (
@@ -8,7 +8,6 @@ export const LeftArrow = ({ className }: SVGProps): ReactElement => {
 			width="93"
 			height="66"
 			viewBox="0 0 93 66"
-			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path

@@ -1,7 +1,7 @@
 import type { ReactElement } from "react"
 import type { OutlineArrowProps } from "./outline-arrow.type"
-import { LeftArrow } from "../svg/left-arrow"
-import { RightArrow } from "../svg/right-arrow"
+import { LeftArrow } from "../../svg/left-arrow"
+import { RightArrow } from "../../svg/right-arrow"
 import clsx from "clsx"
 
 export const OutlineArrow = ({ direction, className }: OutlineArrowProps): ReactElement => {

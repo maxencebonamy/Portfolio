@@ -1,7 +1,7 @@
 "use client"
 
 import { Blob } from "@/lib/components/atoms/blob"
-import Logo from "../components/atoms/svg/logo"
+import { Logo } from "@/lib/components/svg"
 import { ScrollIndicator } from "../components/atoms/scroll-indicator/scroll-indicator"
 import type { ReactElement } from "react"
 import { langData } from "@/lib/lang"

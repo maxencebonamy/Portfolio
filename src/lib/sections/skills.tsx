@@ -6,10 +6,10 @@ import { langData } from "@/lib/lang"
 import { skills, skillsImages } from "@/assets/skills/skills"
 import type { ReactElement } from "react"
 import { useEffect, useRef, useState } from "react"
-import Turn from "../components/atoms/svg/turn"
 import clsx from "clsx"
 import { useLangStore, useSectionsStore } from "../stores"
 import { OutlineArrow } from "../components/atoms/outline-arrow"
+import { TurnArrow } from "../components/molecules/turn-arrow"
 
 export const Skills = (): ReactElement => {
 	const [skill, setSkill] = useState(0)
@@ -119,7 +119,7 @@ export const Skills = (): ReactElement => {
 					<div className="absolute w-96 h-96 rounded-full border-2 border-dark dark:border-light transition-all duration-500" />
 					<div className="absolute w-56 h-56 rounded-full border-2 border-dark dark:border-light transition-all duration-500 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 					<div className={clsx("absolute h-56 w-56 rounded-full right-10 top-1/2 -translate-y-1/2 translate-x-1/2 transition-all duration-500 opacity-0")} style={{ background: `radial-gradient(${skills[skill].color} 0%, transparent 70%` }} />
-					<Turn className="absolute bottom-0 right-0 transition-all duration-500 h-16 w-16 call-to-action cursor-pointer text-dark dark:text-light opacity-75 hover:opacity-100" onClick={nextSkill} />
+					<TurnArrow className="absolute bottom-0 right-0 transition-all duration-500 h-16 w-16 call-to-action cursor-pointer text-dark dark:text-light opacity-75 hover:opacity-100" onClick={nextSkill} />
 					{skills.map((item, index) => (
 						<div
 							key={index}

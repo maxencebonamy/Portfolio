@@ -1,3 +1,7 @@
 export { Moon } from "./moon"
 export { Sun } from "./sun"
+export { Logo } from "./logo"
+export { LeftArrow } from "./left-arrow"
+export { RightArrow } from "./right-arrow"
+export { Turn } from "./turn"
 export type { SVGProps } from "./svg.type"
